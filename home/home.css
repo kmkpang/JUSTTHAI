@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+#holder {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    justify-items: center;
+    justify-self: center;
+}
+
+#letters {
+    width: 308px;
+    margin-left: 6px;
+    height: 276px;
+    background: url(/img/f0cc-kpad.png) no-repeat 1px 0px
+}
+
+#letters div {
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    margin: 1px 2px;
+    text-align: center;
+    font-size: 130%;
+    color: #fff;
+    background-color: #006;
+    background-color: #67357C;
+    float: left;
+    height: 25px;
+    width: 40px;
+    font-weight: normal;
+    padding: 0;
+    cursor: pointer
+}
+
+[tfont="f0"] #letters {
+    background-image: url(/img/f0p-kpad.png)
+}
+
+[tfont="f1"] #letters {
+    background-image: url(/img/f1p-kpad.png)
+}
+
+[tfont="f2"] #letters {
+    background-image: url(/img/f2p-kpad.png)
+}
+
+[tfont="f3"] #letters {
+    background-image: url(/img/f3p-kpad.png)
+}
+
+[tfont="f0"].cc #letters {
+    background-image: url(/img/f0pcc-kpad.png)
+}
+
+[tfont="f1"].cc #letters {
+    background-image: url(/img/f1pcc-kpad.png)
+}
+
+[tfont="f2"].cc #letters {
+    background-image: url(/img/f2pcc-kpad.png)
+}
+
+[tfont="f3"].cc #letters {
+    background-image: url(/img/f3pcc-kpad.png)
+}
+
+[tfont="f0"].blu #letters {
+    background-image: url(/img/f0-kpad.png)
+}
+
+[tfont="f1"].blu #letters {
+    background-image: url(/img/f1-kpad.png)
+}
+
+[tfont="f2"].blu #letters {
+    background-image: url(/img/f2-kpad.png)
+}
+
+[tfont="f3"].blu #letters {
+    background-image: url(/img/f3-kpad.png)
+}
+
+[tfont="f0"].blu.cc #letters {
+    background-image: url(/img/f0cc-kpad.png)
+}
+
+[tfont="f1"].blu.cc #letters {
+    background-image: url(/img/f1cc-kpad.png)
+}
+
+[tfont="f2"].blu.cc #letters {
+    background-image: url(/img/f2cc-kpad.png)
+}
+
+[tfont="f3"].blu.cc #letters {
+    background-image: url(/img/f3cc-kpad.png)
+}
+
+#letters div {
+    color: transparent;
+    background-color: transparent;
+    border-radius: 4px
+}
+
+#letters div b {
+    position: relative;
+    top: -3px
+}
+
+#letters div:hover {
+    border: 2px solid #67357C;
+}
+
+.blu #letters div:hover {
+    border: 1px solid #0087D1
+}
