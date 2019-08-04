@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JUST THAI</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicons -->
+    <link href="https://justthai.000webhostapp.com/img/logo.ico" rel="icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Sarabun&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Main Stylesheet File -->
+    <link href="https://justthai.000webhostapp.com/css/style.css" rel="stylesheet">
+    <link href="https://justthai.000webhostapp.com/css/panel.css" rel="stylesheet">
+    <link href="guess-this-word.css" rel="stylesheet">
+</head>
+
+<body class="sidebar-is-reduced">
+    <header class="l-header">
+        <div class="l-header__inner clearfix">
+            <div class="c-header-icon js-hamburger">
+                <div class="hamburger-toggle">
+                    <span class="bar-top"></span>
+                    <span class="bar-mid"></span>
+                    <span class="bar-bot"></span>
+                </div>
+            </div>
+            <div class="header-icons-group">
+                <div id="keybord" class="c-header-icon">
+                    <i class="fa fa-keyboard-o"></i>
+                </div>
+                <div class="c-header-icon basket">
+                    <i class="fa fa-trophy"></i>
+                    <span class="c-badge c-badge--header-icon animated shake score"></span>
+                </div>
+                <div class="c-header-icon logout"><i class="fa fa-sign-out"></i></div>
+            </div>
+        </div>
+    </header>
+    <div class="l-sidebar">
+        <div class="logo">
+            <img src="https://justthai.000webhostapp.com/img/logo.png" />
+        </div>
+        <div class="l-sidebar__content">
+            <nav class="c-menu js-menu">
+                <ul class="u-list">
+                    <li class="c-menu__item" data-toggle="tooltip" title="Home">
+                        <div class="c-menu__item__inner"><i class="fa fa-bar-chart"></i>
+                            <div class="c-menu-item__title"><span>Home</span></div>
+                        </div>
+                    </li>
+                    <li class="c-menu__item is-active" data-toggle="tooltip" title="Guess Word Game">
+                        <div class="c-menu__item__inner"><i class="fa fa-gamepad"></i>
+                            <div class="c-menu-item__title"><span>Guess Word Game</span></div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <main class="l-main">
+        <div id="container" class="content-wrapper content-wrapper--with-bg">
+            <div class="game-board">
+                <div class="board">
+                    <div class="word-holder">
+                        <h3 class="header">Guess this word... </h3>
+                    </div>
+                    <div id="word"></div>
+                    <div id="input-word" class="input-group">
+                    </div>
+                    <div id="letters-holder" class="open">
+                        <div id="letters">
+                            <div class="pad pad-1">
+                                <p class="text">ก</p><img src="../img/pad/01.png" />
+                            </div>
+                            <div class="pad pad-2">
+                                <p class="text">ข</p><img src="../img/pad/02.png" />
+                            </div>
+                            <div class="pad pad-3">
+                                <p class="text">ฃ</p><img src="../img/pad/03.png" />
+                            </div>
+                            <div class="pad pad-4">
+                                <p class="text">ค</p><img src="../img/pad/04.png" />
+                            </div>
+                            <div class="pad pad-5">
+                                <p class="text">ฅ</p><img src="../img/pad/05.png" />
+                            </div>
+                            <div class="pad pad-6">
+                                <p class="text">ฆ</p><img src="../img/pad/06.png" />
+                            </div>
+                            <div class="pad pad-7">
+                                <p class="text">ง</p><img src="../img/pad/07.png" />
+                            </div>
+                            <div class="pad pad-8">
+                                <p class="text">จ</p><img src="../img/pad/08.png" />
+                            </div>
+                            <div class="pad pad-9">
+                                <p class="text">ฉ</p><img src="../img/pad/09.png" />
+                            </div>
+                            <div class="pad pad-10">
+                                <p class="text">ช</p><img src="../img/pad/10.png" />
+                            </div>
+                            <div class="pad pad-11">
+                                <p class="text">ซ</p><img src="../img/pad/11.png" />
+                            </div>
+                            <div class="pad pad-12">
+                                <p class="text">ฌ</p><img src="../img/pad/12.png" />
+                            </div>
+                            <div class="pad pad-13">
+                                <p class="text">ญ</p><img src="../img/pad/13.png" />
+                            </div>
+                            <div class="pad pad-14">
+                                <p class="text">ฎ</p><img src="../img/pad/14.png" />
+                            </div>
+                            <div class="pad pad-15">
+                                <p class="text">ฏ</p><img src="../img/pad/15.png" />
+                            </div>
+                            <div class="pad pad-16">
+                                <p class="text">ฐ</p><img src="../img/pad/16.png" />
+                            </div>
+                            <div class="pad pad-17">
+                                <p class="text">ฑ</p><img src="../img/pad/17.png" />
+                            </div>
+                            <div class="pad pad-18">
+                                <p class="text">ฒ</p><img src="../img/pad/18.png" />
+                            </div>
+                            <div class="pad pad-19">
+                                <p class="text">ณ</p><img src="../img/pad/19.png" />
+                            </div>
+                            <div class="pad pad-20">
+                                <p class="text">ด</p><img src="../img/pad/20.png" />
+                            </div>
+                            <div class="pad pad-21">
+                                <p class="text">ต</p><img src="../img/pad/21.png" />
+                            </div>
+                            <div class="pad pad-22">
+                                <p class="text">ถ</p><img src="../img/pad/22.png" />
+                            </div>
+                            <div class="pad pad-23">
+                                <p class="text">ท</p><img src="../img/pad/23.png" />
+                            </div>
+                            <div class="pad pad-24">
+                                <p class="text">ธ</p><img src="../img/pad/24.png" />
+                            </div>
+                            <div class="pad pad-25">
+                                <p class="text">น</p><img src="../img/pad/25.png" />
+                            </div>
+                            <div class="pad pad-26">
+                                <p class="text">บ</p><img src="../img/pad/26.png" />
+                            </div>
+                            <div class="pad pad-27">
+                                <p class="text">ป</p><img src="../img/pad/27.png" />
+                            </div>
+                            <div class="pad pad-28">
+                                <p class="text">ผ</p><img src="../img/pad/28.png" />
+                            </div>
+                            <div class="pad pad-29">
+                                <p class="text">ฝ</p><img src="../img/pad/29.png" />
+                            </div>
+                            <div class="pad pad-30">
+                                <p class="text">พ</p><img src="../img/pad/30.png" />
+                            </div>
+                            <div class="pad pad-31">
+                                <p class="text">ฟ</p><img src="../img/pad/31.png" />
+                            </div>
+                            <div class="pad pad-32">
+                                <p class="text">ภ</p><img src="../img/pad/32.png" />
+                            </div>
+                            <div class="pad pad-33">
+                                <p class="text">ม</p><img src="../img/pad/33.png" />
+                            </div>
+                            <div class="pad pad-34">
+                                <p class="text">ย</p><img src="../img/pad/34.png" />
+                            </div>
+                            <div class="pad pad-35">
+                                <p class="text">ร</p><img src="../img/pad/35.png" />
+                            </div>
+                            <div class="pad pad-36">
+                                <p class="text">ฤ</p><img src="../img/pad/36.png" />
+                            </div>
+                            <div class="pad pad-37">
+                                <p class="text">ล</p><img src="../img/pad/37.png" />
+                            </div>
+                            <div class="pad pad-38">
+                                <p class="text">ฦ</p><img src="../img/pad/38.png" />
+                            </div>
+                            <div class="pad pad-39">
+                                <p class="text">ว</p><img src="../img/pad/39.png" />
+                            </div>
+                            <div class="pad pad-40">
+                                <p class="text">ศ</p><img src="../img/pad/40.png" />
+                            </div>
+                            <div class="pad pad-41">
+                                <p class="text">ษ</p><img src="../img/pad/41.png" />
+                            </div>
+                            <div class="pad pad-42">
+                                <p class="text">ส</p><img src="../img/pad/42.png" />
+                            </div>
+                            <div class="pad pad-43">
+                                <p class="text">ห</p><img src="../img/pad/43.png" />
+                            </div>
+                            <div class="pad pad-44">
+                                <p class="text">ฬ</p><img src="../img/pad/44.png" />
+                            </div>
+                            <div class="pad pad-45">
+                                <p class="text">อ</p><img src="../img/pad/45.png" />
+                            </div>
+                            <div class="pad pad-46">
+                                <p class="text">ฮ</p><img src="../img/pad/46.png" />
+                            </div>
+                            <div class="pad pad-47">
+                                <p class="text">ะ</p><img src="../img/pad/47.png" />
+                            </div>
+                            <div class="pad pad-48">
+                                <p class="text">ั</p><img src="../img/pad/48.png" />
+                            </div>
+                            <div class="pad pad-49">
+                                <p class="text">า</p><img src="../img/pad/49.png" />
+                            </div>
+                            <div class="pad pad-50">
+                                <p class="text">ำ</p><img src="../img/pad/50.png" />
+                            </div>
+                            <div class="pad pad-51">
+                                <p class="text">ิ</p><img src="../img/pad/51.png" />
+                            </div>
+                            <div class="pad pad-52">
+                                <p class="text">ี</p><img src="../img/pad/52.png" />
+                            </div>
+                            <div class="pad pad-53">
+                                <p class="text">ึ</p><img src="../img/pad/53.png" />
+                            </div>
+                            <div class="pad pad-54">
+                                <p class="text">ื</p><img src="../img/pad/54.png" />
+                            </div>
+                            <div class="pad pad-55">
+                                <p class="text">ุ</p><img src="../img/pad/55.png" />
+                            </div>
+                            <div class="pad pad-56">
+                                <p class="text">ู</p><img src="../img/pad/56.png" />
+                            </div>
+                            <div class="pad pad-57">
+                                <p class="text">เ</p><img src="../img/pad/57.png" />
+                            </div>
+                            <div class="pad pad-58">
+                                <p class="text">แ</p><img src="../img/pad/58.png" />
+                            </div>
+                            <div class="pad pad-59">
+                                <p class="text">โ</p><img src="../img/pad/59.png" />
+                            </div>
+                            <div class="pad pad-60">
+                                <p class="text">ใ</p><img src="../img/pad/60.png" />
+                            </div>
+                            <div class="pad pad-61">
+                                <p class="text">ไ</p><img src="../img/pad/61.png" />
+                            </div>
+                            <div class="pad pad-62">
+                                <p class="text">็</p><img src="../img/pad/62.png" />
+                            </div>
+                            <div class="pad pad-63">
+                                <p class="text">่</p><img src="../img/pad/63.png" />
+                            </div>
+                            <div class="pad pad-64">
+                                <p class="text">้</p><img src="../img/pad/64.png" />
+                            </div>
+                            <div class="pad pad-65">
+                                <p class="text">๊</p><img src="../img/pad/65.png" />
+                            </div>
+                            <div class="pad pad-66">
+                                <p class="text">๋</p><img src="../img/pad/66.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="modalCongratulations" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-modal="true">
+        <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <img src="https://justthai.000webhostapp.com/img/award.png" class="mg-responsive" alt="">
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                    <h5 class="modal-text-header">ยินดีด้วยคะ คำตอบของคุณถูกต้อง<p>Congratulations!! <br/> Your answer is correct.</p></h5>
+                    <div class="modal-button">
+                        <button class="btn btn-next">
+                            คำต่อไป
+                            <p>Next Word</p>
+                        </button>
+                        <a href="/home">
+                            <button class="btn btn-home">
+                                กลับหน้าแรก
+                                <p>Back Home</p>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://justthai.000webhostapp.com/lib/jquery/jquery.min.js"></script>
+    <script src="https://justthai.000webhostapp.com/lib/jquery/jquery-migrate.min.js"></script>
+    <script src="https://justthai.000webhostapp.com/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <script src='https://use.fontawesome.com/2188c74ac9.js'></script>
+
+    <!-- JavaScript File -->
+    <script src="https://justthai.000webhostapp.com/js/main.js"></script>
+    <script src="guess-this-word.js"></script>
+
+</body>
+
+</html>

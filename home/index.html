@@ -3,388 +3,76 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Regna Bootstrap Template</title>
+    <title>JUST THAI</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicons -->
-    <link href="../img/favicon.png" rel="icon">
-    <link href="../img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://justthai.000webhostapp.com/img/logo.ico" rel="icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sarabun&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS File -->
-    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Libraries CSS Files -->
-    <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="../lib/animate/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Main Stylesheet File -->
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="https://justthai.000webhostapp.com/css/style.css" rel="stylesheet">
+    <link href="https://justthai.000webhostapp.com/css/panel.css" rel="stylesheet">
     <link href="home.css" rel="stylesheet">
 </head>
 
-<body>
-    <div id="container">
-        <div id="holder">
-            <div class="game-board">
-                <div id="col-a" class="board">
-                    <div id="word-holder">
-                        <h3>Guess this word...</h3>
-                        <div id="word" style="width:300px;height:62px;padding:0 0 10px 10px"><svg
-                                preserveAspectRatio="xMinYMid meet" viewBox="0 0 1664 1100" tid="3204">
-                                <path style="fill:#fff" data-uc="3627" data-color="#990099"
-                                    transform="translate(0,844) rotate(180) scale(-1, 1)"
-                                    d="M387 0h-62v222q0 27 -11 27q-8 0 -23 -25l-130 -224h-58v257q-10 -2 -17 -2q-32 0 -54 22.5t-22 54.5q0 31 22 53t54 22q34 0 56.5 -23t22.5 -58v-149q0 -26 -12 -106q10 43 30 79l55 95q18 30 32 34q-20 25 -20 52q0 32 22 54t54 22t54 -22t22 -54q0 -33 -28 -58 q13 -25 13 -54v-219zM120 331q0 14 -10 24t-24 10t-24 -10t-10 -24t10 -24t24 -10t24 10t10 24zM360 331q0 14 -10 24t-24 10t-24 -10t-10 -24t10 -24t24 -10t24 10t10 24z">
-                                </path>
-                                <path style="fill:#67357C" data-uc="-3627" class="underscore"
-                                    transform="translate(0,844) rotate(180) scale(-1, 1)"
-                                    d="M438 0h-338v50h338v-50z"></path>
-                                <path style="fill:#fff" data-uc="3621" data-color="#000"
-                                    transform="translate(438,844) rotate(180) scale(-1, 1)"
-                                    d="M348 0h-62v173q0 30 -34 46q-26 12 -58 12q-31 0 -53 -15q-27 -18 -27 -48v-25q8 2 18 2q32 0 55 -22.5t23 -53.5q0 -32 -24 -54t-55 -22q-33 0 -56 21.5t-23 54.5v92q0 59 44 92q39 29 97 29q62 0 93 -34v45q0 31 -36 48q-28 13 -63 13q-39 0 -67 -18q-31 -20 -37 -54 h-60q6 61 53 94q44 31 113 31q62 0 107 -29q52 -33 52 -92v-286zM166 69q0 14 -10 24t-24 10t-24 -10t-10 -24t10 -24t24 -10t24 10t10 24z">
-                                </path>
-                                <path style="fill:#67357C" data-uc="-3621" class="underscore"
-                                    transform="translate(438,844) rotate(180) scale(-1, 1)"
-                                    d="M399 0h-299v50h299v-50z"></path>
-                                <path style="fill:#fff" data-uc="3656" data-color="#000"
-                                    transform="translate(837,844) rotate(180) scale(-1, 1)"
-                                    d="M-51 677h-60v114h60v-114z"></path>
-                                <path style="fill:#67357C" data-uc="-3656" class="underscore"
-                                    transform="translate(438,844) rotate(180) scale(-1, 1)"
-                                    d="M399 476h-299v50h299v-50z"></path>
-                                <path style="fill:#fff" data-uc="3629" data-color="#000"
-                                    transform="translate(837,844) rotate(180) scale(-1, 1)"
-                                    d="M343 90q0 -52 -47 -77q-38 -21 -98 -21t-97 21q-45 25 -45 77v101q0 36 20 60.5t57 24.5q32 0 54 -21.5t22 -53.5q0 -31 -22 -53t-54 -22q-9 0 -15 2v-31q0 -52 81 -52q82 0 82 53v192q0 33 -31 50q-26 14 -64 14q-95 0 -103 -49h-60q13 101 158 102q67 0 110 -25 q52 -32 52 -96v-196zM167 201q0 14 -10 24t-24 10t-24 -10t-10 -24t10 -24t24 -10t24 10t10 24z">
-                                </path>
-                                <path style="fill:#67357C" data-uc="-3629" class="underscore"
-                                    transform="translate(837,844) rotate(180) scale(-1, 1)"
-                                    d="M394 0h-294v50h294v-50z"></path>
-                                <path style="fill:#fff" data-uc="3609" data-color="#000"
-                                    transform="translate(1231,844) rotate(180) scale(-1, 1)"
-                                    d="M382 189q0 -40 -21 -55q39 -22 39 -67q0 -32 -22 -53.5t-53 -21.5q-29 0 -50 18.5t-25 46.5q-32 -16 -46 -24q-24 -15 -38 -33h-63v257q-10 -2 -17 -2q-32 0 -54 22.5t-22 54.5q0 31 22 53t54 22q34 0 56.5 -23t22.5 -58v-254q16 12 72 35q50 21 69 42q14 15 14 48v202 h62v-210zM120 331q0 14 -10 24t-24 10t-24 -10t-10 -24t10 -24t24 -10t24 10t10 24zM358 67q0 14 -10 24t-24 10t-24 -10t-10 -24t10 -24t24 -10t24 10t10 24z">
-                                </path>
-                                <path style="fill:#67357C" data-uc="-3609" class="underscore"
-                                    transform="translate(1231,844) rotate(180) scale(-1, 1)"
-                                    d="M433 0h-333v50h333v-50z"></path>
-                            </svg></div>
-                        <canvas id="stamp" width="99" height="110">
-                        </canvas>
-                    </div>
-                    <div id="letters-holder">
-                        <h3>Using these letters</h3>
-                        <div id="letters">
-                            <div style="cursor: pointer;">ก</div>
-                            <div style="cursor: pointer;">ข</div>
-                            <div style="cursor: pointer;">ฃ</div>
-                            <div style="cursor: pointer;">ค</div>
-                            <div style="cursor: pointer;">ฅ</div>
-                            <div style="cursor: pointer;">ฆ</div>
-                            <div style="cursor: pointer;">ง</div>
-                            <div style="cursor: pointer;">จ</div>
-                            <div style="cursor: pointer;">ฉ</div>
-                            <div style="cursor: pointer;">ช</div>
-                            <div style="cursor: pointer;">ซ</div>
-                            <div style="cursor: pointer;">ฌ</div>
-                            <div style="cursor: pointer;">ญ</div>
-                            <div style="cursor: pointer;">ฎ</div>
-                            <div style="cursor: pointer;">ฏ</div>
-                            <div style="cursor: pointer;">ฐ</div>
-                            <div style="cursor: pointer;">ฑ</div>
-                            <div style="cursor: pointer;">ฒ</div>
-                            <div style="cursor: pointer;">ณ</div>
-                            <div style="cursor: pointer;">ด</div>
-                            <div style="cursor: pointer;">ต</div>
-                            <div style="cursor: pointer;">ถ</div>
-                            <div style="cursor: pointer;">ท</div>
-                            <div style="cursor: pointer;">ธ</div>
-                            <div style="cursor: pointer;">น</div>
-                            <div style="cursor: pointer;">บ</div>
-                            <div style="cursor: pointer;">ป</div>
-                            <div style="cursor: pointer;">ผ</div>
-                            <div style="cursor: pointer;">ฝ</div>
-                            <div style="cursor: pointer;">พ</div>
-                            <div style="cursor: pointer;">ฟ</div>
-                            <div style="cursor: pointer;">ภ</div>
-                            <div style="cursor: pointer;">ม</div>
-                            <div style="cursor: pointer;">ย</div>
-                            <div style="cursor: pointer;">ร</div>
-                            <div style="cursor: pointer;">ฤ</div>
-                            <div style="cursor: pointer;">ล</div>
-                            <div style="cursor: pointer;">ฦ</div>
-                            <div style="cursor: pointer;">ว</div>
-                            <div style="cursor: pointer;">ศ</div>
-                            <div style="cursor: pointer;">ษ</div>
-                            <div style="cursor: pointer;">ส</div>
-                            <div style="cursor: pointer;">ห</div>
-                            <div style="cursor: pointer;">ฬ</div>
-                            <div style="cursor: pointer;">อ</div>
-                            <div style="cursor: pointer;">ฮ</div>
-                            <div style="cursor: pointer;">ะ</div>
-                            <div style="cursor: pointer;">ั</div>
-                            <div style="cursor: pointer;">า</div>
-                            <div style="cursor: pointer;">ํ</div>
-                            <div style="cursor: pointer;">ิ</div>
-                            <div style="cursor: pointer;">ี</div>
-                            <div style="cursor: pointer;">ึ</div>
-                            <div style="cursor: pointer;">ื</div>
-                            <div style="cursor: pointer;">ุ</div>
-                            <div style="cursor: pointer;">ู</div>
-                            <div style="cursor: pointer;">เ</div>
-                            <div style="cursor: pointer;">แ</div>
-                            <div style="cursor: pointer;">โ</div>
-                            <div style="cursor: pointer;">ใ</div>
-                            <div style="cursor: pointer;">ไ</div>
-                            <div style="cursor: pointer;">็</div>
-                            <div style="cursor: pointer;">่</div>
-                            <div style="cursor: pointer;">้</div>
-                            <div style="cursor: pointer;">๊</div>
-                            <div style="cursor: pointer;">๋</div>
-                        </div>
-                    </div>
+<body class="sidebar-is-reduced">
+    <header class="l-header">
+        <div class="l-header__inner clearfix">
+            <div class="c-header-icon js-hamburger">
+                <div class="hamburger-toggle">
+                    <span class="bar-top"></span>
+                    <span class="bar-mid"></span>
+                    <span class="bar-bot"></span>
                 </div>
             </div>
+            <div class="header-icons-group">
+                <div class="c-header-icon logout"><i class="fa fa-sign-out"></i></div>
+            </div>
+        </div>
+    </header>
+    <div class="l-sidebar">
+        <div class="logo">
+            <img src="https://justthai.000webhostapp.com/img/logo.png" />
+        </div>
+        <div class="l-sidebar__content">
+            <nav class="c-menu js-menu">
+                <ul class="u-list">
+                    <li class="c-menu__item" data-toggle="tooltip" title="Home">
+                        <div class="c-menu__item__inner"><i class="fa fa-bar-chart"></i>
+                            <div class="c-menu-item__title"><span>Home</span></div>
+                        </div>
+                    </li>
+                    <li class="c-menu__item is-active" data-toggle="tooltip" title="Guess Word Game">
+                        <div class="c-menu__item__inner"><i class="fa fa-gamepad"></i>
+                            <div class="c-menu-item__title"><span>Guess Word Game</span></div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </div>
+    <main class="l-main">
+    </main>
 
     <!-- JavaScript Libraries -->
-    <script src="../lib/jquery/jquery.min.js"></script>
-    <script src="../lib/jquery/jquery-migrate.min.js"></script>
-    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../lib/easing/easing.min.js"></script>
-    <script src="../lib/wow/wow.min.js"></script>
-    <script src="../lib/waypoints/waypoints.min.js"></script>
-    <script src="../lib/counterup/counterup.min.js"></script>
-    <script src="../lib/superfish/hoverIntent.js"></script>
-    <script src="../lib/superfish/superfish.min.js"></script>
-    <script src="home.js"></script>
+    <script src="https://justthai.000webhostapp.com/lib/jquery/jquery.min.js"></script>
+    <script src="https://justthai.000webhostapp.com/lib/jquery/jquery-migrate.min.js"></script>
+    <script src="https://justthai.000webhostapp.com/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <script src='https://use.fontawesome.com/2188c74ac9.js'></script>
 
-    <!-- <script>
-            (function ($) {
-                $.widget("td.scoreboard", {
-                    options: {
-                        won: 0,
-                        lost: 0,
-                        storage: null
-                    },
-                    _create: function () {
-                        var self = this;
-                        this.element.addClass('td-scoreboard');
-    
-                        this.element.empty();
-                        this._container = $('<big>Your Score</big><p>Won: <b class="win qty"></b>' +
-                                '&nbsp;Lost: <b class="loss qty"></b></p>' +
-                                '<span class="reset btn mini">Reset</span>')
-                            .appendTo(this.element);
-                        this._on(this.element, {
-                            'click.reset': function () {
-                                this.reset()
-                            }
-                        });
-                        this.qtys = this.element.find('.qty');
-    
-                        if (this.options.storage) {
-                            this.options.won += parseInt(this._thaw('won', '0'));
-                            this.options.lost += parseInt(this._thaw('lost', '0'));
-                        }
-    
-                        this._setOptions({
-                            won: this.options.won,
-                            lost: this.options.lost
-                        });
-                    },
-    
-                    _freeze: function (key, value) {
-                        if (this.options.storage)
-                            localStorage.setItem(this.options.storage + key, "" + value);
-                        return "" + value;
-                    },
-                    _thaw: function (key, defValue) {
-                        // localStorage.removeItem(this.options.storage+key);
-                        if (this.options.storage) {
-                            var it = localStorage.getItem(this.options.storage + key);
-                            if (it != null) return it;
-                        }
-                        return defValue;
-                    },
-    
-                    _destroy: function () {
-                        this.element.removeClass('scoreboard');
-                        this.element.empty();
-                        this._super();
-                    },
-    
-                    _setOption: function (key, value) {
-                        var self = this,
-                            prev = this.options[key];
-                        this._super(key, value); // base
-                        if (key === 'won')
-                            this.qtys[0].innerHTML = this._freeze(key, value);
-                        else if (key === 'lost')
-                            this.qtys[1].innerHTML = this._freeze(key, value);
-                    },
-    
-                    percent: function () {
-                        return Math.round(this.options.won / (this.options.won + this.options.lost) * 100);
-                    },
-                    postWin: function (rec) {
-                        var wins = 1 + this.options.won;
-                        this._setOption('won', wins);
-                    },
-                    postLoss: function (rec) {
-                        var losses = 1 + this.options.lost;
-                        this._setOption('lost', losses);
-                    },
-                    reset: function () {
-                        this._setOptions({
-                            won: 0,
-                            lost: 0
-                        })
-                    }
-                });
-            })(jQuery);
-        </script>
-    
-        <script>
-            soundManager.setup({
-                preferFlash: true,
-                //	flashVersion: 9,
-                url: '/js/', // path to swf files
-                useHighPerformance: true,
-                debugMode: false, // disable debug mode
-                onready: function () {
-                    $('body').addClass('sm2');
-                    L('sound ready');
-                }
-            });
-    
-            var td = td || {};
-            td.debugOn = $('#btn-debug-enabled').hasClass('on');
-    
-            function debug(msg) {
-                if (td.debugOn) $('#debug').append(msg + '<br>')
-            }
-            $('#debug-clear').on('click', function () {
-                $('#debug').html('')
-            });
-            $('#btn-debug-enabled').on('click', function () {
-                $(this).toggleClass('on');
-                td.debugOn = !td.debugOn
-            });
-            td.playThai = function (id) {
-                td.clip('t', id)
-            };
-            td.clip = function (t, id) {
-                // L('clip: ' + t + id);
-                if (!$('body').hasClass('sm2')) return;
-                soundManager.createSound({
-                    id: t + id,
-                    url: '/apps/thai-eng/audio.php?' + t + '=' + id + '&x=x.mp3',
-                    type: 'audio/mp3', // indicates an MP3 link
-                    volume: 50,
-                    autoPlay: false,
-                    onprogress: function () {
-                        L(this.bytesLoaded + '/' + this.bytesTotal + ' bytes loaded,');
-                    },
-                    onload: function (bSuccess) {
-                        // if (!bSuccess) UBOW.FlashAlert("Error loading sound clip");
-                    }
-                }).play();
-            }
-    
-            $('body').on('click', '[tid]', function () {
-                    if (!$(this).closest('.no-auto-snd').length)
-                        td.playThai($(this).attr('tid'));
-                })
-                .removeClass('no-js');
-            $('body').on('click', '[vid]', function () {
-                if (!$(this).closest('.no-auto-snd').length)
-                    td.clip('v', $(this).attr('vid'));
-            });
-            $('body').on('click', '[cid]', function () {
-                if (!$(this).closest('.no-auto-snd').length)
-                    td.clip('c', $(this).attr('cid'));
-            });
-    
-            td.mute = false;
-            td.aud = {
-                init: function () {
-                    // td.mute = !(UBOW.thaw('audio', 'on') == 'on');
-                    $('#td-audio').toggleClass('on', !td.mute)
-                        .mousedown(td.aud.toggle);
-                },
-                play: function (t, id) {
-                    if (!td.mute) td.clip(t, id)
-                },
-                toggle: function () {
-                    td.mute = !td.mute;
-                    // UBOW.freeze('audio', td.mute ? 'off' : 'on');
-                    $('#td-audio').toggleClass('on', !td.mute);
-                    console.log("td.mute: " + td.mute);
-                }
-            };
-            td.setCoded = function (on) {
-                // UBOW.freeze('td.cc', (td.cc = on) ? 'on' : 'off');
-                $('body').toggleClass('cc', on);
-                $('#td-cc').toggleClass('on', on).click(td.cc.toggle);
-                console.log("td.cc: " + td.cc);
-            }
-            $('#td-cc').click(function () {
-                td.setCoded(!td.cc)
-            });
-            // td.setCoded(UBOW.thaw('td.cc', 'on') == 'on');
-            td.shuffle = function (array) {
-                var counter = array.length,
-                    temp, index;
-                while (counter > 0) { // While there are elements in the array
-                    index = Math.floor(Math.random() * counter); // Pick a random index
-                    temp = array[--counter]; // swap last element with it
-                    array[counter] = array[index];
-                    array[index] = temp;
-                }
-                return array;
-            }
-    
-            td.svgFit = function (svg, mw, mh) {
-                try {
-                    var vb = svg.getAttribute('viewBox').split(' ');
-                    var w = vb[2] * mh / vb[3];
-                    if (w > mw) {
-                        w = mw;
-                        h = mw / vb[2] * vb[3];
-                    } else h = mh;
-                    svg.setAttribute('width', w + 'px');
-                    svg.setAttribute('height', h + 'px');
-                } catch (err) {}
-            };
-    
-            $(function () {
-                var $searchform = $('div#search-form'),
-                    $searchinput = $searchform.find("input#searchinput"),
-                    searchprompt = $searchinput.val();
-    
-                $searchinput
-                    .focus(function () {
-                        if (jQuery(this).val() === searchprompt) jQuery(this).val("");
-                    })
-                    .blur(function () {
-                        if (jQuery(this).val() === "") jQuery(this).val(searchprompt);
-                    });
-            });
-    
-            (function ($) {
-                $.fn.goTo = function () {
-                    $('html, body').animate({
-                        scrollTop: $(this).offset().top + 'px'
-                    }, 'fast');
-                    return this;
-                }
-            })(jQuery);
-        </script> -->
+    <!-- JavaScript File -->
+    <script src="https://justthai.000webhostapp.com/js/main.js"></script>
+    <script src="home.js"></script>
 
 </body>
 

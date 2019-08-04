@@ -1,0 +1,249 @@
+#container {
+    width: 100%;
+    position: relative;
+}
+
+#input-word {
+    margin: 1rem;
+    font-size: 2.5rem;
+    line-height: 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (min-width:1024px) {
+    #input-word {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width:320px) and (max-width:1023px){
+    #input-word {
+        width: 90%;
+    }
+}
+
+#thai-answer {
+    width: 55%;
+    height: 5rem;
+    border-radius: 5px 0 0 5px;
+    text-align: center;
+    letter-spacing: .5rem;
+    border: none;
+    display: flex;
+}
+
+
+#word {
+    font-weight: 700;
+}
+.eng {
+    font-size: 2rem;
+}
+
+.tran {
+    font-size: 3rem;
+}
+
+.game-board {
+    display: flex;
+    justify-content:center;
+    width: 100%;
+}
+
+.board {
+    text-align: center;
+    width: 100%;
+}
+
+@media only screen and (min-width:1024px) {
+    .board {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width:320px) and (max-width:1023px){
+    .board {
+        width: 100%;
+    }
+}
+
+#keybord {
+    width: 5rem;
+    height: auto;
+}
+
+@media only screen and (min-width:1024px) {
+    #keybord {
+        display: none;
+    }
+}
+
+@media only screen and (min-width:320px) and (max-width:768px){
+    #keybord {
+        display: flex;
+    }
+}
+
+#letters-holder.open {
+    display: flex;
+    justify-content: center;
+}
+
+#letters-holder.close {
+    display: none;
+}
+
+@media only screen and (min-width:1024px) {
+    #letters-holder {
+        display: none;
+    }
+}
+
+@media only screen and (min-width:320px) and (max-width:768px){
+    #letters-holder  {
+        display: flex;
+    }
+}
+
+.header {
+    color: #fff;
+    margin-top: 3rem;
+}
+
+#letters {
+    min-height: 600px;
+}
+
+.pad {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.text {
+    display: none;
+}
+
+.pad img {
+    margin: .2rem .2rem;
+    border-radius: 15px;
+    width: 50px;
+    height: 60px;
+}
+
+.pad-1 img:hover,
+.pad-8 img:hover,
+.pad-14 img:hover,
+.pad-15 img:hover,
+.pad-20 img:hover,
+.pad-21 img:hover,
+.pad-26 img:hover,
+.pad-27 img:hover,
+.pad-45 img:hover {
+    border: 4px solid #ff9800 !important;
+}
+
+.pad-2 img:hover,
+.pad-3 img:hover,
+.pad-9 img:hover,
+.pad-16 img:hover,
+.pad-22 img:hover,
+.pad-28 img:hover,
+.pad-29 img:hover,
+.pad-40 img:hover,
+.pad-41 img:hover,
+.pad-42 img:hover,
+.pad-43 img:hover {
+    border: 4px solid #7e0000 !important;
+}
+
+.pad-4 img:hover,
+.pad-5 img:hover,
+.pad-6 img:hover,
+.pad-7 img:hover,
+.pad-10 img:hover,
+.pad-11 img:hover,
+.pad-12 img:hover,
+.pad-13 img:hover,
+.pad-17 img:hover,
+.pad-18 img:hover,
+.pad-19 img:hover,
+.pad-23 img:hover,
+.pad-24 img:hover,
+.pad-25 img:hover,
+.pad-30 img:hover,
+.pad-31 img:hover,
+.pad-32 img:hover,
+.pad-33 img:hover,
+.pad-34 img:hover,
+.pad-35 img:hover,
+.pad-37 img:hover,
+.pad-39 img:hover,
+.pad-44 img:hover,
+.pad-46 img:hover {
+    border: 4px solid #007b0f !important;
+}
+
+.pad img:hover,
+img:focus,
+img:active {
+    border: 4px solid #49b2da;
+    transform: scale(1.2);
+}
+
+/* .modal-content {
+    
+} */
+
+.modal-header {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-header img {
+    width: 50%;
+    height: auto;
+}
+
+.modal-body .modal-text-header {
+    color: #dc3545;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.modal-body .modal-text-header p {
+    color: #dc3545;
+    text-align: center;
+    margin: 0.5rem;
+    line-height: 2rem;
+}
+
+.modal-body .modal-button {
+    color: #dc3545;
+    text-align: center;
+}
+
+.modal-body .modal-button button p {
+    margin: 0;
+}
+
+.modal-body .modal-button button.btn.btn-next {
+    color: #fff;
+    background-color: #4CAF50;
+}
+
+.modal-body .modal-button button.btn.btn-next:hover {
+    color: #4CAF50;
+    background-color: #fff;
+}
+
+.modal-body .modal-button button.btn.btn-home {
+    color: #dc3545;
+    background: #ffebeb;
+}
+
+.modal-body .modal-button button.btn.btn-home:hover {
+    color: #ffebeb;
+    background: #dc3545;
+}
