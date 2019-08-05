@@ -13,6 +13,7 @@
 
     $(document).ready(function ($) {
         var user = getCookie('user');
+        console.log(user);
         if (!user) {
             window.document.location.href = '/just-thai/login/';
         } else {
