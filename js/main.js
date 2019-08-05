@@ -48,7 +48,7 @@ jQuery(document).ready(function ($) {
     var value = null;
     date.setTime(date.getTime() - (24*60*60*350));
     expires = "; expires=" + date.toUTCString();
-    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
-    window.document.location.href = '/';
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/just-thai";
+    window.document.location.href = '/just-thai';
   });
 });
