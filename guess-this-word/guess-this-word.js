@@ -33,7 +33,10 @@ function renderInput() {
     var render = '<input type="text" id="thai-answer" maxlength="' + wordcount + '"/>'
     var button = '<div class="input-group-append">'+
     '<button id="delete" class="btn bbtn btn-danger" type="button">Delete</button>'+
-    '</div>'
+    '<button id="next" class="btn bbtn" type="button">'+
+    '<i class="fa fa-forward" aria-hidden="true"></i> Skip Word'+
+    '</button>';
+    '</div>'+
     $('#input-word').append(render,button);
 }
 
@@ -161,6 +164,23 @@ $(document).ready(function ($) {
 
     $('.btn-next').on('click', function () {
         $('#modalCongratulations').modal('hide');
+    });
+
+    $('#next').on('click', function () {
+        console.log('test');
+        var expires = "";
+        var date = new Date();
+        var name = 'currentWord';
+        var value = null;
+        date.setTime(date.getTime() - (24*60*60*350));
+        expires = "; expires=" + date.toUTCString();
+        $.when(
+            document.cookie = name + "=" + (value || "")  + expires + "; path=/just-thai")
+        .done(function () {
+            $('#word').empty();
+            $('#input-word').empty();
+            init();
+        });
     });
 
     windowResize();

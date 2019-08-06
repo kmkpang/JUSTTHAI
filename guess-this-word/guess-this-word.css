@@ -24,6 +24,14 @@
     }
 }
 
+#next {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: #4caf50;
+    color: #fff;
+    display: grid;
+}
+
 #thai-answer {
     width: 55%;
     height: 5rem;
