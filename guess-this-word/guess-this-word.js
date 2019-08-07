@@ -163,6 +163,7 @@ $(document).ready(function ($) {
         var value = '';
         var expires  = "; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
         document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+        document.cookie = name + "=" + (value || "")  + expires + "; path=/just-thai";
         $('#word').empty();
         init();
     });
