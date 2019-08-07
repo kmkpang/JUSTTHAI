@@ -24,20 +24,13 @@ function renderWords() {
     var render = [];
     render.push(tran, eng);
     $('#word').append(render);
-    renderInput();
+    renderMaxLengthInput();
 }
 
-function renderInput() {
+function renderMaxLengthInput() {
     var word = currentWord.thai;
     var wordcount = word.trim().length;
-    var render = '<input type="text" id="thai-answer" maxlength="' + wordcount + '"/>'
-    var button = '<div class="input-group-append">'+
-    '<button id="delete" class="btn bbtn btn-danger" type="button">Delete</button>'+
-    '<button id="next" class="btn bbtn" type="button">'+
-    '<i class="fa fa-forward" aria-hidden="true"></i> Skip Word'+
-    '</button>';
-    '</div>'+
-    $('#input-word').append(render,button);
+    $('#ithai-answer').attr('maxlength', wordcount);
 }
 
 function init() {
@@ -103,7 +96,6 @@ function checkAnswer(newInput){
             expires = "; expires=" + date.toUTCString();
             document.cookie = name + "=" + (value || "")  + expires + "; path=/";
             $('#word').empty();
-            $('#input-word').empty();
             init();
         });
     }
@@ -167,20 +159,12 @@ $(document).ready(function ($) {
     });
 
     $('#next').on('click', function () {
-        console.log('test');
-        var expires = "";
-        var date = new Date();
         var name = 'currentWord';
-        var value = null;
-        date.setTime(date.getTime() - (24*60*60*350));
-        expires = "; expires=" + date.toUTCString();
-        $.when(
-            document.cookie = name + "=" + (value || "")  + expires + "; path=/")
-        .done(function () {
-            $('#word').empty();
-            $('#input-word').empty();
-            init();
-        });
+        var value = '';
+        var expires  = "; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+        document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+        $('#word').empty();
+        init();
     });
 
     windowResize();
