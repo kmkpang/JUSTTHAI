@@ -96,6 +96,7 @@ function checkAnswer(newInput){
             expires = "; expires=" + date.toUTCString();
             document.cookie = name + "=" + (value || "")  + expires + "; path=/";
             $('#word').empty();
+            $('#thai-answer').val('');
             init();
         });
     }
@@ -165,6 +166,7 @@ $(document).ready(function ($) {
         document.cookie = name + "=" + (value || "")  + expires + "; path=/";
         document.cookie = name + "=" + (value || "")  + expires + "; path=/just-thai";
         $('#word').empty();
+        $('#thai-answer').val('');
         init();
     });
 
