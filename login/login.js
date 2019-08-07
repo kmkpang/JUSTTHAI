@@ -37,8 +37,8 @@ jQuery(document).ready(function ($) {
                         var date = new Date();
                         date.setTime(date.getTime() + (24*60*60*350));
                         expires = "; expires=" + date.toUTCString();
-                        document.cookie = name + "=" + (value || "")  + expires + "; path=/just-thai";
-                        document.cookie = name1 + "=" + (value1 || "")  + expires + "; path=/just-thai";
+                        document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+                        document.cookie = name1 + "=" + (value1 || "")  + expires + "; path=/";
 
                         var user = getCookie('user');
                         if (user === username) {

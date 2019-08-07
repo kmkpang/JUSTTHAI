@@ -54,7 +54,7 @@ function init() {
             word = words[Math.floor(Math.random() * words.length)];
             if (word) {
                 var name = 'currentWord';
-                document.cookie = name + "=" + (JSON.stringify(word) || "") + ";" + "path=/just-thai";
+                document.cookie = name + "=" + (JSON.stringify(word) || "") + ";" + "path=/";
                 currentWord = word;
                 renderWords();
             }
@@ -101,7 +101,7 @@ function checkAnswer(newInput){
             var value = null;
             date.setTime(date.getTime() - (24*60*60*350));
             expires = "; expires=" + date.toUTCString();
-            document.cookie = name + "=" + (value || "")  + expires + "; path=/just-thai";
+            document.cookie = name + "=" + (value || "")  + expires + "; path=/";
             $('#word').empty();
             $('#input-word').empty();
             init();
@@ -175,7 +175,7 @@ $(document).ready(function ($) {
         date.setTime(date.getTime() - (24*60*60*350));
         expires = "; expires=" + date.toUTCString();
         $.when(
-            document.cookie = name + "=" + (value || "")  + expires + "; path=/just-thai")
+            document.cookie = name + "=" + (value || "")  + expires + "; path=/")
         .done(function () {
             $('#word').empty();
             $('#input-word').empty();
