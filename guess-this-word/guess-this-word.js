@@ -21,6 +21,28 @@ function deleteCookie( name ) {
 function renderWords() {
     var tran = '<div class="tran">' + currentWord.transliteration + '</div>'
     var eng = '<div class="eng">' + currentWord.english + '</div>'
+
+    $.ajax({
+        url:"https://translate.google.com.vn/translate_tts?ie=UTF-8&q=%E0%B9%80%E0%B8%AD%E0%B8%B2%E0%B8%A1%E0%B8%B2%E0%B9%83%E0%B8%AB%E0%B9%89&tl=th&client=tw-ob",
+        type: "GET",
+        headers: {
+            authority: "translate.google.com.vn",
+            accept: "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3",
+            "accept-language": "th-TH,th;q=0.9,en;q=0.8,de;q=0.7",
+            "upgrade-insecure-requests": 1,
+            "x-client-data": "CI62yQEIorbJAQi/tskBCNC3yQEIqZ3KAQioo8oBCOKoygEIl63KAQjNrcoBCMqvygEIyLDKAQ=="
+        }
+    }).complete(function(res) {
+        console.log(res);
+    });
+
+
+    // var thai = currentWord.thai;
+    // var url = `https://translate.google.com.vn/translate_tts?ie=UTF-8&q=${thai}&tl=th&client=tw-ob`;
+    // $('audio').attr('src', url);
+    // $('audio').attr('preload','auto');
+    // var audio = $('audio').get(0);
+    // audio.load();
     var render = [];
     render.push(tran, eng);
     $('#word').append(render);
@@ -168,6 +190,20 @@ $(document).ready(function ($) {
         $('#word').empty();
         $('#thai-answer').val('');
         init();
+    });
+
+    $('a.say').on('click',function() {
+        var promise = document.querySelector('audio').play();
+        if (promise !== undefined) {
+            console.log(promise);
+            promise.then(_ => {
+                var audio = $('audio').get(0);
+                audio.play();
+            }).catch(error => {
+                // Autoplay was prevented.
+                // Show a "Play" button so that user can start playback.
+            });
+        }
     });
 
     windowResize();

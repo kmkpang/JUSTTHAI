@@ -45,10 +45,10 @@ jQuery(document).ready(function ($) {
     var expires = "";
     var date = new Date();
     var name = 'user';
-    var value = null;
-    date.setTime(date.getTime() - (24*60*60*350));
-    expires = "; expires=" + date.toUTCString();
+    var value = '';
+    var expires  = "; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
     document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/just-thai";
     window.document.location.href = '/just-thai';
   });
 });
