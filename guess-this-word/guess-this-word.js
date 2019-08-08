@@ -176,7 +176,9 @@ $(document).ready(function ($) {
         init();
     });
 
-    $('a.say').on('click',function() {
+    $('#play').on('click',function() {
+        responsiveVoice.speak('The Internet is a series of tubes!');
+        
         // var playPromise = document.querySelector('video').play();
 
         // // In browsers that don’t yet support this functionality,
