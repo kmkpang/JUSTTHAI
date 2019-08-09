@@ -21,12 +21,6 @@ function deleteCookie( name ) {
 function renderWords() {
     var tran = '<div class="tran">' + currentWord.transliteration + '</div>'
     var eng = '<div class="eng">' + currentWord.english + '</div>'
-    // var thai = currentWord.thai;
-    // var url = `https://translate.google.com.vn/translate_tts?ie=UTF-8&q=${thai}&tl=th&client=tw-ob`;
-    // $('audio').attr('src', url);
-    // $('audio').attr('preload','auto');
-    // var audio = $('audio').get(0);
-    // audio.load();
     var render = [];
     render.push(tran, eng);
     $('#word').append(render);
@@ -177,23 +171,8 @@ $(document).ready(function ($) {
     });
 
     $('#play').on('click',function() {
-        responsiveVoice.speak('The Internet is a series of tubes!');
-        
-        // var playPromise = document.querySelector('video').play();
-
-        // // In browsers that don’t yet support this functionality,
-        // // playPromise won’t be defined.
-        // if (playPromise !== undefined) {
-        //     console.log(playPromise);
-        //     playPromise.then(_ => {
-        //         console.log($('video'));
-        //         var audio = $('video').get(0);
-        //         audio.play();
-        //     }).catch(error => {
-        //         // Autoplay was prevented.
-        //         // Show a "Play" button so that user can start playback.
-        //     });
-        // }
+        var thai = currentWord.thai;
+        responsiveVoice.speak(thai);
     });
 
     windowResize();
