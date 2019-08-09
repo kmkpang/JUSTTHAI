@@ -105,6 +105,8 @@ function checkAnswer(newInput){
 
 $(document).ready(function ($) {
 
+    var click = 0;
+
     window.addEventListener('resize', windowResize);
     window.addEventListener('hover', $(document).on("mouseover", ".tooltip", function(e){
         if(!$(this).data('tooltip')){
@@ -168,6 +170,7 @@ $(document).ready(function ($) {
 
     $('.btn-next').on('click', function () {
         $('#modalCongratulations').modal('hide');
+        click = 0;
     });
 
     $('#next').on('click', function () {
@@ -179,10 +182,9 @@ $(document).ready(function ($) {
         $('#word').empty();
         $('#thai-answer').val('');
         init();
+        click = 0;
     });
-    
-    var click = 0;
-    
+
     $('#play').on('click',function() {
         var thai = currentWord.thai;
         responsiveVoice.speak(thai, "Thai Female",{onend: function(){
