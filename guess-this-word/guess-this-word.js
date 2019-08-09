@@ -48,12 +48,18 @@ function init() {
         }).complete(function(res) {
             var word = '';
             words = JSON.parse(res);
-            word = words[Math.floor(Math.random() * words.length)];
-            if (word) {
-                var name = 'currentWord';
-                document.cookie = name + "=" + (JSON.stringify(word) || "") + ";" + "path=/";
-                currentWord = word;
-                renderWords();
+            words = [];
+            console.log(words);
+            if(words.length > 0){
+                word = words[Math.floor(Math.random() * words.length)];
+                if (word) {
+                    var name = 'currentWord';
+                    document.cookie = name + "=" + (JSON.stringify(word) || "") + ";" + "path=/";
+                    currentWord = word;
+                    renderWords();
+                }
+            } else {
+                $('#modalSorry').modal('show');
             }
         });
     } else {
