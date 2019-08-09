@@ -194,6 +194,7 @@
 }
 
 .pad img {
+    background: #fff;
     margin: .2rem .2rem;
     border-radius: 15px;
     width: 50px;

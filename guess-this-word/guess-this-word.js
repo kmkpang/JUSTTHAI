@@ -26,6 +26,7 @@ function renderWords() {
     $('#word').append(render);
     $('#play').removeAttr('disabled');
     renderMaxLengthInput();
+    $('.pad img').css({"border":"none", 'transform':'scale(1)','background' : '#fff'})
 }
 
 function renderMaxLengthInput() {
@@ -79,7 +80,7 @@ function windowResize() {
     }
 }
 
-function checkAnswer(newInput){
+function checkAnswer(newInput) {
     var word = currentWord.thai;
     if (newInput === word) {
         var words_id = currentWord.id;
@@ -100,12 +101,26 @@ function checkAnswer(newInput){
             $('#thai-answer').val('');
             init();
         });
+    } else {
+        var regex = new RegExp('['+word+']', 'g');
+        var found = newInput.match(regex);
+        var text = document.getElementsByClassName("text");
+        for(var i = 0; i <= text.length; i++) {
+            var textInner = text[i].innerHTML;
+            var img = $(text[i]).parent().find('img')
+            var textInput = newInput.split('');
+            if(found.includes(textInner) === true) {
+                $(img).css({"border":"4px solid #8BC34A", 'transform':'scale(1.2)','background' : '#e6fff2'});
+            } else if(textInput.includes(textInner) === true) {
+                $(img).css({"border":"4px solid #ff3568", 'transform':'scale(1.2)','background' : '##ffe8ee'});
+            }
+        }
     }
 }
 
 $(document).ready(function ($) {
 
-    var click = 0;
+    var click = 3;
 
     window.addEventListener('resize', windowResize);
     window.addEventListener('hover', $(document).on("mouseover", ".tooltip", function(e){
@@ -136,7 +151,7 @@ $(document).ready(function ($) {
             var inputCount = newInput.trim().length;
             if (inputCount <= wordCount) {
                 $('#thai-answer').val(newInput);
-                checkAnswer(newInput)
+                checkAnswer(newInput);
             }
         }
     });
@@ -148,7 +163,7 @@ $(document).ready(function ($) {
             var wordCount = word.trim().length;
             var inputCount = input.trim().length;
             if (inputCount <= wordCount) {
-                checkAnswer(input)
+                checkAnswer(input);
             }
         }
     });
@@ -170,7 +185,7 @@ $(document).ready(function ($) {
 
     $('.btn-next').on('click', function () {
         $('#modalCongratulations').modal('hide');
-        click = 0;
+        click = 3;
     });
 
     $('#next').on('click', function () {
@@ -182,17 +197,20 @@ $(document).ready(function ($) {
         $('#word').empty();
         $('#thai-answer').val('');
         init();
-        click = 0;
+        click = 3;
     });
 
     $('#play').on('click',function() {
         var thai = currentWord.thai;
         responsiveVoice.speak(thai, "Thai Female",{onend: function(){
-            click++;
-            if(click > 2) {
+            click--;
+            var count = document.querySelector(".count-play");
+            count.innerHTML = click + ' time left!!';
+            if(click < 1) {
                 $('#play').attr('disabled','disabled');
             }
         }});
+        $('.tooltip').removeClass('show');
     });
 
     windowResize();
