@@ -83,10 +83,11 @@
                         <h3 class="header">Guess this word... </h3>
                     </div>
                     <div id="word"></div>
-                    <button type="button" id="play" value="Play" hidden>Play</button>
-                    <!-- <a id="say" class="say"><h2>SAY IT</h2></a>
-                    <audio src="" class="speech"></audio>
-                    <video controls="" autoplay="" name="media"><source src="https://translate.google.com.vn/translate_tts?ie=UTF-8&amp;q=%E0%B9%80%E0%B8%AD%E0%B8%B2%E0%B8%A1%E0%B8%B2%E0%B9%83%E0%B8%AB%E0%B9%89&amp;tl=th&amp;client=tw-ob" type="audio/mpeg"></video> -->
+                    <div class="play-thai">
+                        <button type="button" id="play" class="btn play" data-toggle="tooltip" data-placement="right" data-original-title="คุณสามารถฟังเสียงได้เพียง 3 ครั้ง">
+                            <i class="fa fa-play" aria-hidden="true"></i>
+                        </button>
+                    </div>
                     <div id="input-word" class="input-group">
                         <input type="text" id="thai-answer"/>
                         <div class="input-group-append">

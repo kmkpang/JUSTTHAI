@@ -3,6 +3,47 @@
     position: relative;
 }
 
+.play-thai {
+    margin-top: 1rem;
+}
+
+.play {
+    background: #03c8f4;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    font-size: 1.5rem;
+    border-radius: 4px;
+    border: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.tooltip {
+    will-change: transform;
+    position: absolute;
+    transform: translate3d(700px, 354px, 0px);
+    top: 0px;
+    left: 0px;
+}
+
+.tooltip .tooltip-inner {
+    width: 200px !important;
+    background: rgba(255, 255, 255, 0.54) !important;
+    color: #fff !important;
+}
+
+.tooltip .arrow::before {
+    border-right-color: rgba(255, 255, 255, 0.54) !important;
+}
+
+@media (max-width:640px) {
+    .play {
+        padding: 6px 12px;
+        font-size: 12px;
+    }   
+}
+
 #input-word {
     margin: 1rem;
     font-size: 2.5rem;
