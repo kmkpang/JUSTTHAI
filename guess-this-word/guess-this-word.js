@@ -25,8 +25,10 @@ function renderWords() {
     render.push(tran, eng);
     $('#word').append(render);
     $('#play').removeAttr('disabled');
+    $('.pad img').css({"border":"none", 'transform':'scale(1)','background' : '#fff'});
+    var count = document.querySelector(".count-play");
+    count.innerHTML = '';
     renderMaxLengthInput();
-    $('.pad img').css({"border":"none", 'transform':'scale(1)','background' : '#fff'})
 }
 
 function renderMaxLengthInput() {
