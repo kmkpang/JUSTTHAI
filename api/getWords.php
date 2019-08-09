@@ -7,7 +7,7 @@
 
     try{
         $id = $_GET['id'];
-        $sql = "SELECT w.id, w.thai, w.english, w.transliteration FROM words w LEFT join status s on w.id = s.word_id where s.id IS NUll";
+        $sql = "SELECT * FROM words where id NOT IN (SELECT s.word_id from status s WHERE s.user_id = $id)";
         $result = $db ->query($sql)->fetchAll();
     }
     catch(PDOException $ex){

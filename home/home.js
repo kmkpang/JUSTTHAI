@@ -1,81 +1,23 @@
-var api = "https://fcc-weather-api.glitch.me/api/current?";
-var lat, lon;
-var tempUnit = 'C';
-var currentTempInCelsius;
-
-
-function IconGen(desc) {
-    var desc = desc.toLowerCase()
-    switch (desc) {
-        case 'drizzle':
-            addIcon(desc)
-            break;
-        case 'clouds':
-            addIcon(desc)
-            break;
-        case 'rain':
-            addIcon(desc)
-            break;
-        case 'snow':
-            addIcon(desc)
-            break;
-        case 'clear':
-            addIcon(desc)
-            break;
-        case 'thunderstom':
-            addIcon(desc)
-            break;
-        default:
-            $('div.clouds').removeClass('hide');
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
     }
-}
-
-function addIcon(desc) {
-    $('div.' + desc).removeClass('hide');
-}
-
-function getWeather(lat, lon) {
-    var urlString = api + lat + "&" + lon;
-    $.ajax({
-        url: urlString, success: function (result) {
-            $("#city").text(result.name + ", ");
-            $("#country").text(result.sys.country);
-            currentTempInCelsius = Math.round(result.main.temp * 10) / 10;
-            $("#temp").text(currentTempInCelsius + " " + String.fromCharCode(176));
-            $("#tempunit").text(tempUnit);
-            $("#desc").text(result.weather[0].main);
-            IconGen(result.weather[0].main);
-        }
-    });
+    return null;
 }
 
 jQuery(document).ready(function ($) {
     "use strict";
-    $('body').removeClass('sidebar-is-reduced');
-    $('body').addClass('sidebar-is-expanded');
-    $('.hamburger-toggle').addClass('is-opened');
 
-    
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function (position) {
-            console.log(position);
-            var lat = "lat=" + position.coords.latitude;
-            var lon = "lon=" + position.coords.longitude;
-            getWeather(lat, lon);
-            });
+    var user = getCookie('user');
+    if (!user) {
+        window.document.location.href = '/just-thai';
     } else {
-        console.log("Geolocation is not supported by this browser.");
+        $('body').removeClass('sidebar-is-reduced');
+        $('body').addClass('sidebar-is-expanded');
+        $('.hamburger-toggle').addClass('is-opened');
     }
-    
-    $("#tempunit").click(function () {
-        var currentTempUnit = $("#tempunit").text();
-        var newTempUnit = currentTempUnit == "C" ? "F" : "C";
-        $("#tempunit").text(newTempUnit);
-        if (newTempUnit == "F") {
-            var fahTemp = Math.round(parseInt($("#temp").text()) * 9 / 5 + 32);
-            $("#temp").text(fahTemp + " " + String.fromCharCode(176));
-        } else {
-            $("#temp").text(currentTempInCelsius + " " + String.fromCharCode(176));
-        }
-    });
 })

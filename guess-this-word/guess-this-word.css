@@ -307,6 +307,16 @@ img:active {
     background-color: #4CAF50;
 }
 
+.modal-body .modal-button button.btn.btn-reset {
+    color: #03c8f4;
+    background-color: #d9f8ff;
+}
+
+.modal-body .modal-button button.btn.btn-reset:hover {
+    color: #fff;
+    background-color: #03c8f4;
+}
+
 .modal-body .modal-button button.btn.btn-home {
     color: #dc3545;
     background: #ffebeb;

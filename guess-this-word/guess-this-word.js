@@ -96,16 +96,13 @@ function checkAnswer(newInput) {
             url: "https://justthai.000webhostapp.com/api/saveStatus.php",
             data: { words_id: words_id, user_id : user_id }
         }).complete(function() {
-            var expires = "";
-            var date = new Date();
             var name = 'currentWord';
-            var value = null;
-            date.setTime(date.getTime() - (24*60*60*350));
-            expires = "; expires=" + date.toUTCString();
+            var value = '';
+            var expires  = "; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
             document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+            document.cookie = name + "=" + (value || "")  + expires + "; path=/just-thai";
             $('#word').empty();
             $('#thai-answer').val('');
-            init();
         });
     } else {
         var regex = new RegExp('['+word+']', 'g');
@@ -218,6 +215,24 @@ $(document).ready(function ($) {
         }});
         $('.tooltip').removeClass('show');
     });
+
+    $('.btn-reset').on('click', function() {
+        $.ajax({
+            type: "POST",
+            url: "https://justthai.000webhostapp.com/api/saveResetStatus.php",
+            data: { user_id: user_id }
+        }).complete(function() {
+            $('#modalSorry').modal('hide');
+            var name = 'currentWord';
+            var value = '';
+            var expires  = "; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+            document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+            document.cookie = name + "=" + (value || "")  + expires + "; path=/just-thai";
+            $('#word').empty();
+            $('#thai-answer').val('');
+            init();
+        });
+    })
 
     windowResize();
 });
