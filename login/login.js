@@ -12,6 +12,17 @@ function getCookie(name) {
 jQuery(document).ready(function ($) {
     "use strict";
 
+    var cookies = document.cookie.split(";");
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        var split = cookie.split('=');
+        var name = split[0];
+        var value = '';
+        var expires  = "; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+        document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+        document.cookie = name + "=" + (value || "")  + expires + "; path=/just-thai";
+    }
+
     $('#login').click(function () {
         let username = $('input#username').val();
         let password = $('input#password').val();
