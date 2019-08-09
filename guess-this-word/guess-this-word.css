@@ -298,13 +298,13 @@ img:active {
 }
 
 .modal-body .modal-button button.btn.btn-next {
-    color: #fff;
-    background-color: #4CAF50;
+    color: #4CAF50;
+    background-color: #d0ffd2;
 }
 
 .modal-body .modal-button button.btn.btn-next:hover {
-    color: #4CAF50;
-    background-color: #fff;
+    color: #fff;
+    background-color: #4CAF50;
 }
 
 .modal-body .modal-button button.btn.btn-home {
