@@ -48,8 +48,6 @@ function init() {
         }).complete(function(res) {
             var word = '';
             words = JSON.parse(res);
-            words = [];
-            console.log(words);
             if(words.length > 0){
                 word = words[Math.floor(Math.random() * words.length)];
                 if (word) {
