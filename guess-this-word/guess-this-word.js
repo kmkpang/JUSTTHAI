@@ -103,6 +103,7 @@ function checkAnswer(newInput) {
             document.cookie = name + "=" + (value || "")  + expires + "; path=/just-thai";
             $('#word').empty();
             $('#thai-answer').val('');
+            init();
         });
     } else {
         var regex = new RegExp('['+word+']', 'g');
