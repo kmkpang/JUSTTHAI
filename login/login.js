@@ -53,7 +53,7 @@ jQuery(document).ready(function ($) {
 
                         var user = getCookie('user');
                         if (user === username) {
-                            window.document.location.href = '/just-thai/guess-this-word';
+                            window.document.location.href = '/just-thai/home';
                         }
                     }
                 })

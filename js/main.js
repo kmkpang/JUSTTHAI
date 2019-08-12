@@ -10,6 +10,10 @@ var Dashboard = function () {
         var hasSubmenu = $(el).hasClass("has-submenu");
         $(global.menuClass + " .is-active").removeClass("is-active");
         $(el).addClass("is-active");
+
+        if (hasSubmenu) {
+          $(el).find("ul").slideDown();
+        }
     };
 
     var sidebarChangeWidth = function sidebarChangeWidth() {

@@ -21,7 +21,7 @@
     <!-- Main Stylesheet File -->
     <link href="https://justthai.000webhostapp.com/css/style.css" rel="stylesheet">
     <link href="https://justthai.000webhostapp.com/css/panel.css" rel="stylesheet">
-    <link href="home.css" rel="stylesheet">
+    <link href="thai-tone-rules.css" rel="stylesheet">
 </head>
 
 <body class="sidebar-is-reduced">
@@ -51,14 +51,26 @@
                             <div class="c-menu__item__inner">
                                 <i class="fa fa-bar-chart"></i>
                                 <div class="c-menu-item__title"><span>Home</span>
-                            </div>
+                                </div>
                         </li>
                     </a>
                     <a href="/just-thai/thai-tone-rules">
                         <li class="c-menu__item is-active" data-toggle="tooltip" title="Thai Tone Rules">
                             <div class="c-menu__item__inner">
                                 <i class="fa fa-book" aria-hidden="true"></i>
-                                <div class="c-menu-item__title"><span>Thai Tone Rules</span>
+                                <div class="c-menu-item__title">
+                                    <span>Thai Tone Rules</span>
+                                </div>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="/just-thai/thai-tone-rules-test">
+                        <li class="c-menu__item" data-toggle="tooltip" title="Thai Tone Rules Test">
+                            <div class="c-menu__item__inner">
+                                <i class="fa fa-gamepad"></i>
+                                <div class="c-menu-item__title">
+                                    <span>Thai Tone Rules Test</span>
+                                </div>
                             </div>
                         </li>
                     </a>
@@ -75,6 +87,284 @@
         </div>
     </div>
     <main class="l-main">
+        <div id="tabs" class="main-tabs">
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-index="0" data-toggle="tab" href="#tab-0" role="tab">Thai Tone
+                        Rules</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-index="1" data-toggle="tab" href="#tab-1" role="tab">Tone Marks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-index="2" data-toggle="tab" href="#tab-2" role="tab">Consonant Class</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-index="3" data-toggle="tab" href="#tab-3" role="tab">Live/Dead Syllable</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-index="4" data-toggle="tab" href="#tab-4" role="tab">Vowel Length</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-index="5" data-toggle="tab" href="#tab-5" role="tab">Tones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-index="5" data-toggle="tab" href="#tab-6" role="tab">Thai Tone Rules Diagram</a>
+                </li>
+            </ul>
+        </div>
+        <div class="content-wrapper">
+            <div class="board">
+                <div class="tab-content">
+                    <div class="tab-pane fade ml-3 mt-3 active show" id="tab-0" role="tabpanel">
+                        <h2 class="header">THAI TONE RULES</h2>
+                        <div class="content">
+                            <div class="detail-content">
+                                Before you start, you should already know some basics about the Thai alphabet. You
+                                should know all 44 consonants
+                                <span>(as well as their pronunciation when they are at the end of a word)</span> and all
+                                of the vowels
+                                <span>(as well as their lengths)</span>. You should also know how to pronounce each of
+                                the 5 tones.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade ml-3 mt-3" id="tab-1" role="tabpanel">
+                        <h2 class="header">TONE MARKS</h2>
+                        <div class="content">
+                            <table class="blueTable">
+                                <tbody>
+                                    <tr>
+                                        <td class="picture">
+                                            <img src="https://justthai.000webhostapp.com/img/tone/ayk.png" />
+                                        </td>
+                                        <td class="title">My Ayk</td>
+                                        <td rowspan="2">These two tone marks are very common. It’s useful to know their
+                                            names, so they are represented in the posters as a toe and an egg - two
+                                            English words which sound similar to their names in Thai.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="picture">
+                                            <img src="https://justthai.000webhostapp.com/img/tone/toe.png" />
+                                        </td>
+                                        <td class="title">Mai Toh<br />(My toe)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="picture">
+                                            <img src="https://justthai.000webhostapp.com/img/tone/dtree.png" />
+                                        </td>
+                                        <td class="title">Mai Dtree</td>
+                                        <td class="detail">(always a high tone, so no symbol is required)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="picture">
+                                            <img src="https://justthai.000webhostapp.com/img/tone/judtawah.png" />
+                                        </td>
+                                        <td class="title">Mai Jud-ta-wah</td>
+                                        <td class="detail">(always a rising tone, so no symbol is required)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade ml-3 mt-3" id="tab-2" role="tabpanel">
+                        <h2 class="header">CONSONANT CLASS</h2>
+                        <div class="content">
+                            <table class="blueTable">
+                                <tbody>
+                                    <tr>
+                                        <td class="picture">
+                                            <img src="https://justthai.000webhostapp.com/img/tone/diamond.png" />
+                                        </td>
+                                        <td class="title">Diamond<br />(High Class)</td>
+                                        <td rowspan="3">To make distinctions between high/mid/low class and high/mid/low
+                                            tone, different objects represent the consonant classes. Here,
+                                            high class is represented by an expensive object (a diamond),
+                                            mid class by a mid-range object (a car) and low class by a cheap object (a
+                                            hat). This way, you can still remember the technical terms, by relating them
+                                            to
+                                            the ‘value’ of the objects. (Now you can stop trying to memorize boring and
+                                            confusing equations like
+                                            “low class initial consonant + dead syllable + long vowel = falling tone”
+                                            and learn them instead by using posters as visual reminders).
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="picture">
+                                            <img src="https://justthai.000webhostapp.com/img/tone/car.png" />
+                                        </td>
+                                        <td class="title">Car<br />(Mid Class)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="picture">
+                                            <img src="https://justthai.000webhostapp.com/img/tone/cap.png" />
+                                        </td>
+                                        <td class="title">Hat<br />(Low Class)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="header-des">
+                                <h3>Rather than get confused between ‘high, mid and low’ class, and ‘high mid and low’
+                                    tone, I choose to represent the consonant classes like this:
+                                </h3>
+                            </div>
+                            <div class="des">
+                                <div class="row">
+                                    <div class="col">Diamond<br />(High Class)</div>
+                                    <div class="col">
+                                        <div class="top-img-des">ข <span class="old">ฃ</span> ฉ ฐ ถ ผ ฝ ส ศ ษ ห</div>
+                                        <img class="img-des"
+                                            src="https://justthai.000webhostapp.com/img/tone/diamond.png" />
+                                    </div>
+                                    <div class="col">There are only 11</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">Car<br />(Mid Class)</div>
+                                    <div class="col">
+                                        <div class="top-img-des">ข ก จ <span class="old">ฎ ฏ</span> ด ต บ ป อ</div>
+                                        <img class="img-des"
+                                            src="https://justthai.000webhostapp.com/img/tone/car.png" />
+                                    </div>
+                                    <div class="col">There are only 11</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">Had<br />(Low Class)</div>
+                                    <div class="col">
+                                        <div class="top-img-des">ค <span class="old">ฅ</span> ฆ ง ช ซ <span
+                                                class="old">ฌ</span> ฌ <span class="old">ฑ ฒ</span> ณ ท ธ น พ ฟ ภ ม ย ร
+                                            ฤ ล ว <span class="old">ฬ</span> ฮ
+                                        </div>
+                                        <img class="img-des"
+                                            src="https://justthai.000webhostapp.com/img/tone/cap.png" />
+                                    </div>
+                                    <div class="col had">If you memorize the two groups above, it will then be easy to
+                                        remember that all the other consonants will be ‘hats’ (low class)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade ml-3 mt-3" id="tab-3" role="tabpanel">
+                        <h2 class="header">LIVE/DEAD SYLLABLE</h2>
+                        <div class="content">
+                            <table class="blueTable">
+                                <tbody>
+                                    <tr>
+                                        <td class="picture">
+                                            <img src="https://justthai.000webhostapp.com/img/tone/smiley.png" />
+                                        </td>
+                                        <td class="title">Live syllable</td>
+                                        <td rowspan="2">The smiley face represents a live syllable. The dead face
+                                            represents a dead syllable.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="picture">
+                                            <img src="https://justthai.000webhostapp.com/img/tone/dead.png" />
+                                        </td>
+                                        <td class="title">Dead syllable</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="des-2">
+                                <div class="head-des-2">Live Syllables</div>
+                                <div class="row">
+                                    <div class="col">
+                                        <img class="img-des"
+                                            src="https://justthai.000webhostapp.com/img/tone/smiley.png" />
+                                        <div class="top-img-des">
+                                            Live syllables are ones which end in ‘sonorants’, also known as ‘singing
+                                            sounds’ –
+                                            sounds that you can drag out for a long time:
+                                            <p class="sounds">Consonants* (ng n m y w sounds)</p>
+                                            <p class="letter">ง น ม ย ว</p>
+                                            OR a long vowel
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="head-des-2">Dead syllable</div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="top-img-des">Dead syllables are ones which end in ‘stops’, sounds
+                                            that you can’t drag out.
+                                            <p class="sounds">Consonants* (k p t sounds)</p>
+                                            <p class="letter">ก จ ด ต บ ป</p>
+                                            OR a short vowel
+                                        </div>
+                                        <img class="img-des"
+                                            src="https://justthai.000webhostapp.com/img/tone/dead.png" />
+                                    </div>
+                                </div>
+                                <div class="red">*In Thai many consonants make a different depending on their position
+                                    in a word. At the end of a word an ‘r’ becomes an ‘n’, a ‘j’ becomes a ‘t’ and so
+                                    on.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade ml-3 mt-3" id="tab-4" role="tabpanel">
+                        <h2 class="header">VOWEL LENGTH</h2>
+                        <div class="content">
+                            <table class="blueTable">
+                                <tbody>
+                                    <tr>
+                                        <td class="picture">
+                                            <img src="https://justthai.000webhostapp.com/img/tone/dead-short.png" />
+                                        </td>
+                                        <td class="title">Short Vowel</td>
+                                        <td rowspan="2">I have represented the short vowel as a short arrow, 
+                                            dead head and the long vowel as a long arrow, 
+                                            dead head. You will only need to know the vowel length for 1 out of the 15 tone rules, 
+                                            but it’s still worth remembering the vowel lengths. 
+                                            (Similar sounding words with different vowel lengths can have completely different meanings, 
+                                            regardless of tone).
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="picture">
+                                            <img src="https://justthai.000webhostapp.com/img/tone/dead-long.png" />
+                                        </td>
+                                        <td class="title">Long Vowel</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade ml-3 mt-3" id="tab-5" role="tabpanel">
+                        <h2 class="header">TONES</h2>
+                        <div class="content">
+                            <div class="row">
+                                <div class="col">
+                                    <img src="https://justthai.000webhostapp.com/img/tone/mid.png" />
+                                    <div class="title">Mid</div>
+                                </div>
+                                <div class="col">
+                                    <img src="https://justthai.000webhostapp.com/img/tone/low.png" />
+                                    <div class="title">Low</div>
+                                </div>
+                                <div class="col">
+                                    <img src="https://justthai.000webhostapp.com/img/tone/falling.png" />
+                                    <div class="title">Falling</div>
+                                </div>
+                                <div class="col">
+                                    <img src="https://justthai.000webhostapp.com/img/tone/hight.png" />
+                                    <div class="title">Hight</div>
+                                </div>
+                                <div class="col">
+                                    <img src="https://justthai.000webhostapp.com/img/tone/rising.png" />
+                                    <div class="title">Rising</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade ml-3 mt-3" id="tab-6" role="tabpanel">
+                        <h2 class="header">Thai Tone Rules - Easy to Follow Diagram</h2>
+                        <div class="content">
+                            <img class="content-img" src="https://justthai.000webhostapp.com/img/tone/thaiToneRules.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- JavaScript Libraries -->
@@ -84,8 +374,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
     <script src='https://use.fontawesome.com/2188c74ac9.js'></script>
 
+    <!-- JavaScript Libraries jquery scrolling -->
+    <script
+        src="https://rawgit.com/mikejacobson/jquery-bootstrap-scrolling-tabs/master/dist/jquery.scrolling-tabs.min.js">
+    </script>
+
     <!-- JavaScript File -->
-    <script src="https://justthai.000webhostapp.com/js/main.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="thai-tone-rules.js"></script>
 
 </body>
 
