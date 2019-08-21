@@ -90,6 +90,8 @@ function checkAnswer(newInput) {
     var word = currentWord.thai;
     if (newInput === word) {
         var words_id = currentWord.id;
+        var words = document.querySelector(".show-words-right");
+        words.innerHTML = currentWord.english +' = '+ currentWord.thai;
         $('#modalCongratulations').modal('show');
         $.ajax({
             type: "POST",
@@ -125,6 +127,7 @@ function checkAnswer(newInput) {
 $(document).ready(function ($) {
 
     var click = 3;
+    var caret = 0
 
     window.addEventListener('resize', windowResize);
     window.addEventListener('hover', $(document).on("mouseover", ".tooltip", function(e){
@@ -145,16 +148,29 @@ $(document).ready(function ($) {
         init();
     }
 
+    document.getElementById('thai-answer').addEventListener('keyup', e => {
+        caret = e.target.selectionStart;
+    })
+
+    document.getElementById('thai-answer').addEventListener('click', e => {
+        caret = e.target.selectionStart;
+    })
+
     $('.pad').on('click', function () {
         var char = $(this).children()[0].innerHTML;
         var input = $('#thai-answer').val();
         if(input.length >= 0){
-            newInput = input + char;
+            var textBefore = input.substring(0,  caret);
+            var textAfter  = input.substring(caret, input.length);
+            newInput = textBefore + char + textAfter;
             var word = currentWord.thai;
             var wordCount = word.trim().length;
             var inputCount = newInput.trim().length;
             if (inputCount <= wordCount) {
                 $('#thai-answer').val(newInput);
+                caret = caret + 1;
+                $('#thai-answer')[0].setSelectionRange(caret, caret);
+                $('#thai-answer').focus();
                 checkAnswer(newInput);
             }
         }
@@ -174,8 +190,13 @@ $(document).ready(function ($) {
 
     $('#delete').on('click', function () {
         var input = $('#thai-answer').val();
-        var values = $.trim(input).slice(0, -1)
+        var inputFrist = $.trim(input).slice(0, caret - 1);
+        var inputLast= $.trim(input).slice(caret, input.trim().length);
+        var values = inputFrist + inputLast
         $('#thai-answer').val(values);
+        caret = caret -1;
+        $('#thai-answer')[0].setSelectionRange(caret, caret);
+        $('#thai-answer').focus();
     });
 
     $('#keybord').on('click', function () {

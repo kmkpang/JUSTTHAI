@@ -275,6 +275,13 @@ img:active {
     height: auto;
 }
 
+.modal-body .show-words-right {
+    color: #4CAF50;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
 .modal-body .modal-text-header {
     color: #dc3545;
     text-align: center;
