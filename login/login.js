@@ -9,6 +9,44 @@ function getCookie(name) {
     return null;
 }
 
+function login() {
+    let username = $('input#username').val();
+    let password = $('input#password').val();
+
+    $.ajax({
+        url: "https://justthai.000webhostapp.com/api/getUsers.php"
+    }).complete(function(res) {
+        var users = [];
+        if(res){
+            users = JSON.parse(res);
+            users.map((user) => {
+                let decryptUsername = CryptoJS.AES.decrypt(user.username, "username");
+                let decryptPassword= CryptoJS.AES.decrypt(user.password, "password");
+                let stringUsername = decryptUsername.toString(CryptoJS.enc.Utf8);
+                let stringPassword = decryptPassword.toString(CryptoJS.enc.Utf8);
+
+                if(stringUsername === username && stringPassword === password) {
+                    var name = 'user';
+                    var value = username;
+                    var name1 = 'id';
+                    var value1 = user.id;
+                    var expires = "";
+                    var date = new Date();
+                    date.setTime(date.getTime() + (24*60*60*350));
+                    expires = "; expires=" + date.toUTCString();
+                    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+                    document.cookie = name1 + "=" + (value1 || "")  + expires + "; path=/";
+
+                    var user = getCookie('user');
+                    if (user === username) {
+                        window.document.location.href = '/just-thai/home';
+                    }
+                }
+            })
+        }
+    });
+}
+
 jQuery(document).ready(function ($) {
     "use strict";
 
@@ -23,41 +61,16 @@ jQuery(document).ready(function ($) {
         document.cookie = name + "=" + (value || "")  + expires + "; path=/just-thai";
     }
 
-    $('#login').click(function () {
-        let username = $('input#username').val();
-        let password = $('input#password').val();
-
-        $.ajax({
-            url: "https://justthai.000webhostapp.com/api/getUsers.php"
-        }).complete(function(res) {
-            var users = [];
-            if(res){
-                users = JSON.parse(res);
-                users.map((user) => {
-                    let decryptUsername = CryptoJS.AES.decrypt(user.username, "username");
-                    let decryptPassword= CryptoJS.AES.decrypt(user.password, "password");
-                    let stringUsername = decryptUsername.toString(CryptoJS.enc.Utf8);
-                    let stringPassword = decryptPassword.toString(CryptoJS.enc.Utf8);
-
-                    if(stringUsername === username && stringPassword === password) {
-                        var name = 'user';
-                        var value = username;
-                        var name1 = 'id';
-                        var value1 = user.id;
-                        var expires = "";
-                        var date = new Date();
-                        date.setTime(date.getTime() + (24*60*60*350));
-                        expires = "; expires=" + date.toUTCString();
-                        document.cookie = name + "=" + (value || "")  + expires + "; path=/";
-                        document.cookie = name1 + "=" + (value1 || "")  + expires + "; path=/";
-
-                        var user = getCookie('user');
-                        if (user === username) {
-                            window.document.location.href = '/just-thai/home';
-                        }
-                    }
-                })
-            }
-        });
+    $('.loginForm').on('keypress',function(e) {
+        if(e.which == 13) {
+            login();
+        }
     });
+    
+
+    $('#login').click(function () {
+        login();
+    });
+
+
 });
