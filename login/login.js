@@ -61,16 +61,8 @@ jQuery(document).ready(function ($) {
         document.cookie = name + "=" + (value || "")  + expires + "; path=/just-thai";
     }
 
-    $('.loginForm').on('keypress',function(e) {
-        if(e.which == 13) {
-            login();
-        }
-    });
-    
-
-    $('#login').click(function () {
+    $('.loginForm').on("submit", function(){
         login();
-    });
-
-
+        return false;
+    })
 });

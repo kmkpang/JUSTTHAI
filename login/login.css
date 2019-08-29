@@ -59,6 +59,7 @@
     margin: 10px;
     border: 2px solid #fff;
     color: #fff;
+    background: none;
 }
 
 #login-form .btn-get-started:hover {
