@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JUST THAI - THAI TONE RULES</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicons -->
+    <link href="https://justthai.000webhostapp.com/img/logo.ico" rel="icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Sarabun&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Main Stylesheet File -->
+    <link href="https://justthai.000webhostapp.com/css/style.css" rel="stylesheet">
+    <link href="https://justthai.000webhostapp.com/css/panel.css" rel="stylesheet">
+    <link href="thai-tone-rules-test.css" rel="stylesheet">
+</head>
+
+<body class="sidebar-is-reduced">
+    <header class="l-header">
+        <div class="l-header__inner clearfix">
+            <div class="c-header-icon js-hamburger">
+                <div class="hamburger-toggle">
+                    <span class="bar-top"></span>
+                    <span class="bar-mid"></span>
+                    <span class="bar-bot"></span>
+                </div>
+            </div>
+            <div class="header-icons-group">
+                <div id="keybord" class="c-header-icon">
+                    <i class="fa fa-keyboard-o"></i>
+                </div>
+                <div class="c-header-icon basket">
+                    <i class="fa fa-trophy"></i>
+                    <span class="c-badge c-badge--header-icon animated shake score"></span>
+                </div>
+                <div class="c-header-icon logout"><i class="fa fa-sign-out"></i></div>
+            </div>
+        </div>
+    </header>
+    <div class="l-sidebar">
+        <a href="/just-thai/home" class="logo">
+            <img src="https://justthai.000webhostapp.com/img/logo.png" />
+        </a>
+        <div class="l-sidebar__content">
+            <nav class="c-menu js-menu">
+                <ul class="u-list">
+                    <a href="/just-thai/home">
+                        <li class="c-menu__item" data-toggle="tooltip" title="Home">
+                            <div class="c-menu__item__inner">
+                                <i class="fa fa-bar-chart"></i>
+                                <div class="c-menu-item__title"><span>Home</span>
+                                </div>
+                        </li>
+                    </a>
+                    <a href="/just-thai/thai-tone-rules">
+                        <li class="c-menu__item" data-toggle="tooltip" title="Thai Tone Rules">
+                            <div class="c-menu__item__inner">
+                                <i class="fa fa-book" aria-hidden="true"></i>
+                                <div class="c-menu-item__title">
+                                    <span>Thai Tone Rules</span>
+                                </div>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="/just-thai/thai-tone-rules-test">
+                        <li class="c-menu__item is-active" data-toggle="tooltip" title="Thai Tone Rules Test">
+                            <div class="c-menu__item__inner">
+                                <i class="fa fa-graduation-cap"></i>
+                                <div class="c-menu-item__title">
+                                    <span>Thai Tone Rules Test</span>
+                                </div>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="/just-thai/guess-this-word">
+                        <li class="c-menu__item" data-toggle="tooltip" title="Guess Word Game">
+                            <div class="c-menu__item__inner">
+                                <i class="fa fa-gamepad"></i>
+                                <div class="c-menu-item__title"><span>Guess Word Game</span></div>
+                            </div>
+                        </li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <main class="l-main">
+        <div class="main-rules-test">
+            <div id="word"></div>
+            <div class="header">Select the correct elements of word ... </div>
+            <div class="main-select-rules-test">
+                <div class="row select-tone-marks">
+                    <input id='marks' hidden />
+                    <div class="col" style="max-width: 20%;">
+                        <p class="sub-header">Tone Mark</p>
+                    </div>
+                    <div class="col marks">
+                        <p class="text">ayk</p>
+                        <img src="https://justthai.000webhostapp.com/img/tone/ayk.png" />
+                    </div>
+                    <div class="col marks">
+                        <p class="text">toe</p>
+                        <img src="https://justthai.000webhostapp.com/img/tone/toe.png" />
+                    </div>
+                    <div class="col marks">
+                        <p class="text">dtree</p>
+                        <img src="https://justthai.000webhostapp.com/img/tone/dtree.png" />
+                    </div>
+                    <div class="col marks">
+                        <p class="text">judtawah</p>
+                        <img src="https://justthai.000webhostapp.com/img/tone/judtawah.png" />
+                    </div>
+                </div>
+                <div class="row select-consonant-class">
+                    <input id='consonant' hidden />
+                    <div class="col" style="max-width: 20%;">
+                        <p class="sub-header">Consonant Class</p>
+                    </div>
+                    <div class="col consonant">
+                        <p class="text">high</p>
+                        <img src="https://justthai.000webhostapp.com/img/tone/diamond.png" />
+                    </div>
+                    <div class="col consonant">
+                        <p class="text">mid</p>
+                        <img src="https://justthai.000webhostapp.com/img/tone/car.png" />
+                    </div>
+                    <div class="col consonant">
+                        <p class="text">low</p>
+                        <img src="https://justthai.000webhostapp.com/img/tone/cap.png" />
+                    </div>
+                </div>
+                <div class="row select-syllable">
+                    <input id='syllable' hidden />
+                    <div class="col" style="max-width: 20%;">
+                        <p class="sub-header">Live/Dead Syllable</p>
+                    </div>
+                    <div class="col syllable">
+                        <p class="text">live</p>
+                        <img src="https://justthai.000webhostapp.com/img/tone/smiley.png" />
+                    </div>
+                    <div class="col syllable">
+                        <p class="text">dead</p>
+                        <img src="https://justthai.000webhostapp.com/img/tone/dead.png" />
+                    </div>
+                </div>
+                <div class="row select-vowel-length">
+                    <input id='vowel-length' hidden />
+                    <div class="col" style="max-width: 20%;">
+                        <p class="sub-header">Vowel Length</p>
+                    </div>
+                    <div class="col vowel-length">
+                        <p class="text">short</p>
+                        <img src="https://justthai.000webhostapp.com/img/tone/dead-short.png" />
+                    </div>
+                    <div class="col vowel-length">
+                        <p class="text">long</p>
+                        <img src="https://justthai.000webhostapp.com/img/tone/dead-long.png" />
+                    </div>
+                </div>
+                <div class="row select-tones">
+                    <input id='tones' hidden />
+                    <div class="col" style="max-width: 20%;">
+                        <p class="sub-header">Tones</p>
+                    </div>
+                    <div class="col tones">
+                        <p class="text">mid-tones</p>
+                        <img src="https://justthai.000webhostapp.com/img/tone/mid.png" />
+                    </div>
+                    <div class="col tones">
+                        <p class="text">low-tones</p>
+                        <img src="https://justthai.000webhostapp.com/img/tone/low.png" />
+                    </div>
+                    <div class="col tones">
+                        <p class="text">falling-tones</p>
+                        <img src="https://justthai.000webhostapp.com/img/tone/falling.png" />
+                    </div>
+                    <div class="col tones">
+                        <p class="text">hight-tones</p>
+                        <img src="https://justthai.000webhostapp.com/img/tone/hight.png" />
+                    </div>
+                    <div class="col tones">
+                        <p class="text">rising-tones</p>
+                        <img src="https://justthai.000webhostapp.com/img/tone/rising.png" />
+                    </div>
+                </div>
+                <div class="row button-submit">
+                    <button id="submit" class="btn-get-started" type="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="modalCongratulations" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-modal="true">
+        <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <img src="https://justthai.000webhostapp.com/img/award.png" class="mg-responsive" alt="">
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                    <h5 class="modal-text-header">ยินดีด้วยคะ คำตอบของคุณถูกต้อง<p>Congratulations!! <br /> Your answer
+                            is correct.</p>
+                    </h5>
+                    <div class="modal-button">
+                        <button class="btn btn-next">
+                            คำต่อไป
+                            <p>Next Word</p>
+                        </button>
+                        <a href="/just-thai/home">
+                            <button class="btn btn-home">
+                                กลับหน้าแรก
+                                <p>Back Home</p>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalWrong" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-modal="true">
+        <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <img src="https://justthai.000webhostapp.com/img/pray.png" class="mg-responsive" alt="">
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                    <h5 class="modal-text-header">เสียใจด้วยคะ คำตอบของคุณไม่ถูกต้อง<p>Sorry!! <br /> Your answer
+                            is incorrect.</p>
+                    </h5>
+                    <div class="modal-button">
+                        <button class="btn btn-try">
+                            ลองอีกครั้ง
+                            <p>Try again</p>
+                        </button>
+                        <button class="btn btn-skip">
+                            ข้ามคำนี้
+                            <p>Skip this word</p>
+                        </button>
+                        <a href="/just-thai/home">
+                            <button class="btn btn-home">
+                                กลับหน้าแรก
+                                <p>Back Home</p>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalSorry" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-modal="true">
+        <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <img src="https://justthai.000webhostapp.com/img/pray.png" class="mg-responsive" alt="">
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                    <h5 class="modal-text-header">
+                        <p>Sorry!!<br />Don't have more word or new word.</p>
+                    </h5>
+                    <div class="modal-button">
+                        <button class="btn btn-reset">
+                            เริ่มเกมส์อีกครั้ง
+                            <p>Start game again</p>
+                        </button>
+                        <a href="/just-thai/home">
+                            <button class="btn btn-home">
+                                กลับหน้าแรก
+                                <p>Back Home</p>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://justthai.000webhostapp.com/lib/jquery/jquery.min.js"></script>
+    <script src="https://justthai.000webhostapp.com/lib/jquery/jquery-migrate.min.js"></script>
+    <script src="https://justthai.000webhostapp.com/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <script src='https://use.fontawesome.com/2188c74ac9.js'></script>
+
+    <!-- JavaScript Libraries jquery scrolling -->
+    <script
+        src="https://rawgit.com/mikejacobson/jquery-bootstrap-scrolling-tabs/master/dist/jquery.scrolling-tabs.min.js">
+    </script>
+
+    <!-- JavaScript File -->
+    <script src="../js/main.js"></script>
+    <script src="thai-tone-rules-test.js"></script>
+
+</body>
+
+</html>

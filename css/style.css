@@ -151,3 +151,5 @@ a:hover {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
+
+button:focus {outline:0;}

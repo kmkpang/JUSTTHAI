@@ -1,0 +1,248 @@
+.main-rules-test {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main-select-rules-test {
+    width: 100%
+}
+
+.row {
+    margin: 2rem 0 0;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    padding: 0 !important; 
+}
+
+.text {
+    display: none;
+}
+
+.select-tone-marks .marks {
+    justify-content: center;
+    border: 2px solid #fff0;
+    border-radius: 50px;
+    margin: 0 5%;
+    min-height: 100px;
+}
+
+.select-tone-marks .marks img {
+    width: auto;
+    height: 45px;
+}
+
+.select-consonant-class .consonant {
+    justify-content: center;
+    border: 2px solid #fff0;
+    border-radius: 50px;
+    margin: 0 10%;
+    min-height: 100px;
+}
+
+.select-consonant-class .consonant img {
+    width: auto;
+    height: 90px;
+}
+
+.select-syllable .syllable {
+    justify-content: center;
+    border: 2px solid #fff0;
+    border-radius: 50px;
+    margin: 0 10%;
+    min-height: 100px;
+}
+
+.select-syllable .syllable img {
+    width: auto;
+    height: 90px;
+}
+
+.select-vowel-length .vowel-length {
+    justify-content: center;
+    border: 2px solid #fff0;
+    border-radius: 50px;
+    margin: 0 10%;
+    min-height: 100px;
+}
+
+.select-vowel-length .vowel-length img {
+    width: auto;
+    height: 115px;
+}
+
+.select-tones .tones {
+    justify-content: center;
+    border: 2px solid #fff0;
+    border-radius: 50px;
+    margin: 0 2%;
+    min-height: 100px;
+}
+
+.select-tones .tones img {
+    width: auto;
+    height: 100px;
+}
+
+.marks:hover,
+.consonant:hover,
+.syllable:hover,
+.vowel-length:hover,
+.tones:hover {
+    border: 2px solid #ff8d00;
+}
+
+.marks,
+.consonant,
+.syllable,
+.vowel-length,
+.tones {
+    cursor: pointer;
+}
+
+.select {
+    border: 2px solid #d30000 !important;
+}
+
+.header, #word {
+    width: 100%;
+    text-align: center;
+    margin: 2rem 0 .5rem;
+}
+
+.header {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: 30px
+}
+
+#word {
+    font-size: 50px
+}
+
+.button-submit {
+    justify-content: center;
+    margin-top: 3rem !important;
+}
+
+.btn-get-started {
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 1px;
+    display: inline-block;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 1rem;
+    width: 200px;
+    height: 50px;
+    border: 2px solid #fff;
+    color: #fff;
+    background: #5f9cfd;
+}
+.btn-get-started:hover {
+    border: 2px solid #5f9cfd;
+    color: #5f9cfd;
+    background: #fff;
+}
+
+
+.modal-header {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-header img {
+    width: 50%;
+    height: auto;
+}
+
+.modal-body .show-words-right {
+    color: #4CAF50;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.modal-body .modal-text-header {
+    color: #dc3545;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.modal-body .modal-text-header p {
+    color: #dc3545;
+    text-align: center;
+    margin: 0.5rem;
+    line-height: 2rem;
+}
+
+.modal-body .modal-button {
+    color: #dc3545;
+    text-align: center;
+}
+
+.modal-body .modal-button button p {
+    margin: 0;
+}
+
+.modal-body .modal-button .btn {
+    margin: 0.3rem;
+}
+
+.modal-body .modal-button button.btn.btn-next {
+    color: #4CAF50;
+    background-color: #d0ffd2;
+}
+
+.modal-body .modal-button button.btn.btn-next:hover {
+    color: #fff;
+    background-color: #4CAF50;
+}
+
+.modal-body .modal-button button.btn.btn-skip {
+    color: #4CAF50;
+    background-color: #d0ffd2;
+}
+
+.modal-body .modal-button button.btn.btn-skip:hover {
+    color: #fff;
+    background-color: #4CAF50;
+}
+
+.modal-body .modal-button button.btn.btn-try {
+    color: #03c8f4;
+    background-color: #d9f8ff;
+}
+
+.modal-body .modal-button button.btn.btn-try:hover {
+    color: #fff;
+    background-color: #03c8f4;
+}
+
+.modal-body .modal-button button.btn.btn-reset {
+    color: #03c8f4;
+    background-color: #d9f8ff;
+}
+
+.modal-body .modal-button button.btn.btn-reset:hover {
+    color: #fff;
+    background-color: #03c8f4;
+}
+
+.modal-body .modal-button button.btn.btn-home {
+    color: #dc3545;
+    background: #ffebeb;
+}
+
+.modal-body .modal-button button.btn.btn-home:hover {
+    color: #ffebeb;
+    background: #dc3545;
+}
