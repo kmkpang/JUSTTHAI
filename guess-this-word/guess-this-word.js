@@ -44,7 +44,7 @@ function init() {
         $.ajax({
             type: "GET",
             url: "https://justthai.000webhostapp.com/api/getWords.php",
-            data: { id: user_id }
+            data: { id: user_id , game_id: 1 }
         }).complete(function(res) {
             var word = '';
             words = JSON.parse(res);
@@ -68,7 +68,7 @@ function init() {
     $.ajax({
         type: "GET",
         url: "https://justthai.000webhostapp.com/api/getStatus.php",
-        data: { id: user_id }
+        data: { id: user_id, game_id: 1 }
     }).complete(function(res) {
         var status = '';
         status = JSON.parse(res);
@@ -96,7 +96,7 @@ function checkAnswer(newInput) {
         $.ajax({
             type: "POST",
             url: "https://justthai.000webhostapp.com/api/saveStatus.php",
-            data: { words_id: words_id, user_id : user_id }
+            data: { words_id: words_id, user_id : user_id , game_id: 1 }
         }).complete(function() {
             var name = 'currentWord';
             var value = '';
@@ -242,7 +242,7 @@ $(document).ready(function ($) {
         $.ajax({
             type: "POST",
             url: "https://justthai.000webhostapp.com/api/saveResetStatus.php",
-            data: { user_id: user_id }
+            data: { user_id: user_id, game_id: 1 }
         }).complete(function() {
             $('#modalSorry').modal('hide');
             var name = 'currentWord';

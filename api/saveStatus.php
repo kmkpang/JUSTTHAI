@@ -8,8 +8,9 @@
     try{
         $user_id = $_POST['user_id'];
         $words_id = $_POST['words_id'];
-        $sql = "INSERT INTO status (word_id, user_id)
-                VALUES ($words_id,$user_id)";
+        $game_id = $_POST['game_id'];
+        $sql = "INSERT INTO status (word_id, user_id, game_id)
+                VALUES ($words_id,$user_id,$game_id)";
         $result = $db->query($sql);
     }
     catch(PDOException $ex){
