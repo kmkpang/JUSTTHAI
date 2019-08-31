@@ -15,7 +15,6 @@ function getCookie(name) {
 }
 
 function renderWords() {
-    console.log(currentToneTest);
     var words = '<div class="words">' + currentToneTest.words + '</div>'
     var render = [];
     render.push(words);
