@@ -45,9 +45,15 @@ var Dashboard = function () {
 jQuery(document).ready(function ($) {
   Dashboard.init();
 
+  var date = new Date();
+  if(date.getDate() < 5 && date.getMonth() === 8 && date.getFullYear() === 2019) {
+    var addNew = $('.fa-graduation-cap').parent();
+    var div = `<span class="badge badge-pill badge-danger" style="position: absolute; top: 0; right: 0;">New</span>`;
+    $(addNew).append(div);
+  }
+
   $('.logout').on('click', function () {
     var expires = "";
-    var date = new Date();
     var name = 'user';
     var value = '';
     var expires  = "; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
