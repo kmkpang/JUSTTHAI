@@ -185,12 +185,13 @@ jQuery(document).ready(function ($) {
     });
 
     $('.btn-skip').on('click', function () {
-        var name = 'cookieToneTest';
+        var name = 'currentToneTest';
         var value = '';
         var expires  = "; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
         document.cookie = name + "=" + (value || "")  + expires + "; path=/";
         document.cookie = name + "=" + (value || "")  + expires + "; path=/just-thai";
         $('#word').empty();
+        $('#modalWrong').modal('hide');
         init();
     });
 
@@ -201,7 +202,7 @@ jQuery(document).ready(function ($) {
             data: { user_id: user_id, game_id: 2 }
         }).complete(function() {
             $('#modalSorry').modal('hide');
-            var name = 'currentWord';
+            var name = 'currentToneTest';
             var value = '';
             var expires  = "; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
             document.cookie = name + "=" + (value || "")  + expires + "; path=/";
