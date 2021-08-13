@@ -27,7 +27,7 @@ function init() {
     if(cookieToneTest === '' || cookieToneTest === null) {
         $.ajax({
             type: "GET",
-            url: "https://justthai.000webhostapp.com/api/getThaiToneWords.php",
+            url: "https://just-thai.000webhostapp.com/api/getThaiToneWords.php",
             data: { id: user_id , game_id: 2 }
         }).complete(function(res) {
             var word = '';
@@ -51,7 +51,7 @@ function init() {
 
     $.ajax({
         type: "GET",
-        url: "https://justthai.000webhostapp.com/api/getStatus.php",
+        url: "https://just-thai.000webhostapp.com/api/getStatus.php",
         data: { id: user_id, game_id: 2 }
     }).complete(function(res) {
         var status = '';
@@ -154,7 +154,7 @@ jQuery(document).ready(function ($) {
             $('#modalCongratulations').modal('show');
             $.ajax({
                 type: "POST",
-                url: "https://justthai.000webhostapp.com/api/saveStatus.php",
+                url: "https://just-thai.000webhostapp.com/api/saveStatus.php",
                 data: { words_id: words_id, user_id : user_id , game_id: 2 }
             }).complete(function() {
                 var name = 'currentToneTest';
@@ -198,7 +198,7 @@ jQuery(document).ready(function ($) {
     $('.btn-reset').on('click', function() {
         $.ajax({
             type: "POST",
-            url: "https://justthai.000webhostapp.com/api/saveResetStatus.php",
+            url: "https://just-thai.000webhostapp.com/api/saveResetStatus.php",
             data: { user_id: user_id, game_id: 2 }
         }).complete(function() {
             $('#modalSorry').modal('hide');
