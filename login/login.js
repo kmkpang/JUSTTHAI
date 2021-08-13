@@ -14,17 +14,16 @@ function login() {
     let password = $('input#password').val();
 
     $.ajax({
-        url: "https://justthai.000webhostapp.com/api/getUsers.php"
+        url: "https://just-thai.000webhostapp.com/api/getUsers.php"
     }).complete(function(res) {
         var users = [];
         if(res){
             users = JSON.parse(res);
+            console.log(users)
             users.map((user) => {
-                let decryptUsername = CryptoJS.AES.decrypt(user.username, "username");
-                let decryptPassword= CryptoJS.AES.decrypt(user.password, "password");
-                let stringUsername = decryptUsername.toString(CryptoJS.enc.Utf8);
-                let stringPassword = decryptPassword.toString(CryptoJS.enc.Utf8);
-
+                let stringUsername = user.username;
+                let stringPassword = user.password;
+                console.log(stringUsername, stringPassword)
                 if(stringUsername === username && stringPassword === password) {
                     var name = 'user';
                     var value = username;

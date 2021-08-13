@@ -2,9 +2,10 @@
     header("Access-Control-Allow-Origin: *");
     function connection(){
         $hostName = 'localhost';
-        $dbUserName = 'id10331729_justthai';
-        $dbPassword = 'P@ng220439';
-        $databaseName = 'id10331729_justthai';
+        $dbUserName = 'id17413431_kmkpang';
+        $dbPassword = 'KMKp@ng205929';
+        $databaseName = 'id17413431_justthai';
+        // KMKp@ng205929
     
         try{
             $dbHandler = new PDO('mysql:host='. $hostName . ';dbname='. $databaseName, $dbUserName, $dbPassword);
